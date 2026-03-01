@@ -21,45 +21,37 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
-      {/* Hero Section */}
-      <section className="relative bg-hero-gradient text-white py-28 md:py-48">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                {language === 'en'
-                  ? 'Connecting Rural Sri Lanka to the World'
-                  : 'ග්‍රාමීය ශ්‍රී ලංකාව ලෝකයට සම්බන්ධ කිරීම'}
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-amber-50">
-                {language === 'en'
-                  ? 'Discover authentic products from Sri Lankan village artisans and farmers'
-                  : 'ශ්‍රී ලංකික ගම්මාන ශිල්පීන් සහ ගොවීන්ගෙන් අව්‍යාජ නිෂ්පාදන සොයා ගන්න'}
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  to="/products"
-                  className="inline-flex items-center px-8 py-4 bg-white text-primary rounded-lg hover:bg-white/90 transition font-semibold"
-                >
-                  <ShoppingBag className="w-5 h-5 mr-2" />
-                  {language === 'en' ? 'Shop Now' : 'දැන් සාප්පු ස���ාරි'}
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <Link
-                  to="/become-seller"
-                  className="inline-flex items-center px-8 py-4 bg-secondary text-white rounded-lg hover:bg-secondary-dark transition font-semibold"
-                >
-                  <Users className="w-5 h-5 mr-2" />
-                  {t('becomeSeller')}
-                </Link>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <img
-                src="/hero_banner.jpg"
-                alt="Sri Lankan village artisans"
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
-              />
+      {/* Responsive Full Width Hero Banner Section */}
+      <section className="relative w-full bg-gray-900 border-b border-gray-800">
+        <div className="relative w-full">
+          {/* Background Image */}
+          <img
+            src={"/banner.png"}
+            alt="Sri Lankan Marketplace Background"
+            className="w-full h-[300px] md:h-auto object-cover md:max-h-[700px] shadow-md"
+          />
+          {/* Subtle gradient overlay to make buttons pop at the bottom */}
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-gray-900/80 to-transparent pointer-events-none" />
+
+          {/* Button Overlay - Centered at the bottom */}
+          <div className="absolute inset-x-0 bottom-4 sm:bottom-8 md:bottom-12 flex justify-center w-full px-4">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-5">
+              <Link
+                to="/products"
+                className="group relative inline-flex items-center justify-center px-6 py-2 sm:px-8 sm:py-4 font-bold text-white transition-all duration-300 bg-amber-600 rounded-xl hover:bg-amber-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(217,119,6,0.6)] overflow-hidden"
+              >
+                <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 relative z-10" />
+                <span className="relative z-10 text-sm sm:text-base">{language === 'en' ? 'Shop Now' : 'දැන් සාප්පු සවාරි'}</span>
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-1 sm:ml-2 transform group-hover:translate-x-1 transition-transform relative z-10" />
+              </Link>
+
+              <Link
+                to="/become-seller"
+                className="group inline-flex items-center justify-center px-6 py-2 sm:px-8 sm:py-4 font-bold text-white transition-all duration-300 bg-black/60 border border-white/20 backdrop-blur-md rounded-xl hover:bg-black/80 hover:border-white/40 hover:scale-105"
+              >
+                <Users className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 group-hover:text-amber-400 transition-colors" />
+                <span className="group-hover:text-amber-400 transition-colors text-sm sm:text-base">{t('becomeSeller') || "Become a seller"}</span>
+              </Link>
             </div>
           </div>
         </div>
@@ -125,6 +117,44 @@ export const HomePage: React.FC = () => {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Promotional Ad Banner */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-r from-amber-600 to-orange-500">
+            {/* Background Decorative Pattern/Overlay */}
+            <div className="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
+            <div className="absolute -right-20 -top-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+            <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-amber-300/20 rounded-full blur-3xl"></div>
+
+            <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="text-center md:text-left">
+                <span className="inline-flex items-center px-3 py-1 bg-white/20 text-white rounded-full text-sm font-bold tracking-wider uppercase mb-4 backdrop-blur-md shadow-sm border border-white/20">
+                  <span className="w-2 h-2 rounded-full bg-amber-200 mr-2 animate-pulse"></span>
+                  {language === 'en' ? 'Limited Time Offer' : 'සීමිත කාල දීමනාවක්'}
+                </span>
+                <h3 className="text-3xl md:text-5xl font-extrabold text-white mb-3 tracking-tight">
+                  {language === 'en' ? 'Save 20% on Wholesale' : 'තොග මිලදී ගැනුම් මත 20%ක් ඉතිරි කරන්න'}
+                </h3>
+                <p className="text-amber-50 text-lg md:text-xl max-w-2xl font-medium">
+                  {language === 'en'
+                    ? 'Stock up on premium Sri Lankan spices, organic oils, and pure honey. Direct from the village to your business.'
+                    : 'සුවිශේෂී ශ්‍රී ලාංකීය කුළුබඩු, කාබනික තෙල් සහ පිරිසිදු මී පැණි මිලදී ගන්න. ගමෙන් කෙළින්ම ඔබේ ව්‍යාපාරයට.'}
+                </p>
+              </div>
+              <div className="flex-shrink-0">
+                <Link
+                  to="/products"
+                  className="group inline-flex items-center justify-center px-8 py-4 text-amber-700 bg-white hover:bg-gray-50 rounded-xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+                >
+                  {language === 'en' ? 'Claim Offer Now' : 'දීමනාව ලබා ගන්න'}
+                  <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
