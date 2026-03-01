@@ -22,6 +22,7 @@ import { RegisterPage } from "./pages/RegisterPage";
 import { BecomeSellerPage } from "./pages/BecomeSellerPage";
 import { AboutPage } from "./pages/AboutPage";
 import { ContactPage } from "./pages/ContactPage";
+import { SearchResultsPage } from "./pages/SearchResultsPage";
 
 // Buyer Pages
 import { BuyerDashboard } from "./pages/buyer/BuyerDashboard";
@@ -83,6 +84,7 @@ const AppContent: React.FC = () => {
           path="/products/:id"
           element={<ProductDetailsPage />}
         />
+        <Route path="/search" element={<SearchResultsPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route
