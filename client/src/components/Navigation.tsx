@@ -25,7 +25,7 @@ export const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/logo_nav.png" alt="GamiSaviya.lk" className="h-16 w-auto transform hover:scale-105 transition duration-300 rounded-lg" />
+            <img src="/logo_nav.png" alt="Gamisaviya.LK" className="h-16 w-auto transform hover:scale-105 transition duration-300 rounded-lg" />
           </Link>
 
           {/* Desktop Navigation */}

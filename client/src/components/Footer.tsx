@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <img src="/logo.png" alt="GamiSaviya.lk" className="h-28 w-auto opacity-90" />
+              <img src="/logo.png" alt="Gamisaviya.LK" className="h-28 w-auto opacity-90" />
             </div>
             <p className="text-gray-400 mb-4">
               Connecting rural Sri Lankan sellers with buyers nationwide
@@ -104,7 +104,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2026 GamiSaviya.lk. All rights reserved.</p>
+          <p>&copy; 2026 Gamisaviya.LK. All rights reserved.</p>
           <p className="text-sm mt-2">
             Empowering rural communities through digital commerce
           </p>
