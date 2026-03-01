@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ShoppingBag, Users, Shield, Truck, Loader2 } from 'lucide-react';
 import { productAPI, sellerAPI } from '../../utils/api';
@@ -61,30 +61,6 @@ export function HomePage() {
             alt="Sri Lankan Marketplace Background"
             className="w-full h-[300px] md:h-auto object-cover md:max-h-[700px] shadow-md"
           />
-          {/* Subtle gradient overlay to make buttons pop at the bottom */}
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-gray-900/80 to-transparent pointer-events-none" />
-
-          {/* Button Overlay - Centered at the bottom */}
-          <div className="absolute inset-x-0 bottom-4 sm:bottom-8 md:bottom-12 flex justify-center w-full px-4">
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-5">
-              <Link
-                to="/products"
-                className="group relative inline-flex items-center justify-center px-6 py-2 sm:px-8 sm:py-4 font-bold text-white transition-all duration-300 bg-amber-600 rounded-xl hover:bg-amber-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(217,119,6,0.6)] overflow-hidden"
-              >
-                <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 relative z-10" />
-                <span className="relative z-10 text-sm sm:text-base">{t('shopNow') || 'Shop Now'}</span>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-1 sm:ml-2 transform group-hover:translate-x-1 transition-transform relative z-10" />
-              </Link>
-
-              <Link
-                to="/become-seller"
-                className="group inline-flex items-center justify-center px-6 py-2 sm:px-8 sm:py-4 font-bold text-white transition-all duration-300 bg-black/60 border border-white/20 backdrop-blur-md rounded-xl hover:bg-black/80 hover:border-white/40 hover:scale-105"
-              >
-                <Users className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 group-hover:text-amber-400 transition-colors" />
-                <span className="group-hover:text-amber-400 transition-colors text-sm sm:text-base">{t('becomeSeller') || "Become a seller"}</span>
-              </Link>
-            </div>
-          </div>
         </div>
       </section>
 
