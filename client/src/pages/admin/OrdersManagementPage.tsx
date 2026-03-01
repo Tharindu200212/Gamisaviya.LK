@@ -158,9 +158,9 @@ export default function OrdersManagementPage() {
   const getStatusBadge = (status: string) => {
     const colors = {
       pending: 'bg-yellow-100 text-yellow-700 border-yellow-200',
-      confirmed: 'bg-blue-100 text-blue-700 border-blue-200',
-      processing: 'bg-purple-100 text-purple-700 border-purple-200',
-      shipped: 'bg-indigo-100 text-indigo-700 border-indigo-200',
+      confirmed: 'bg-green-100 text-green-700 border-green-200',
+      processing: 'bg-green-100 text-green-700 border-green-200',
+      shipped: 'bg-green-100 text-green-700 border-green-200',
       delivered: 'bg-green-100 text-green-700 border-green-200',
       cancelled: 'bg-red-100 text-red-700 border-red-200',
     };
@@ -188,21 +188,21 @@ export default function OrdersManagementPage() {
 
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-          <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
+          <Card className="p-4 bg-gradient-to-br from-green-50 to-green-100 border-green-200">
             <div className="flex items-center gap-3">
-              <ShoppingBag className="w-8 h-8 text-blue-600" />
+              <ShoppingBag className="w-8 h-8 text-green-600" />
               <div>
-                <p className="text-sm text-blue-700 mb-1">Total Orders</p>
-                <p className="text-3xl font-bold text-blue-900">{orders.length}</p>
+                <p className="text-sm text-green-700 mb-1">Total Orders</p>
+                <p className="text-3xl font-bold text-green-900">{orders.length}</p>
               </div>
             </div>
           </Card>
-          <Card className="p-4 bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
+          <Card className="p-4 bg-gradient-to-br from-green-50 to-green-100 border-green-200">
             <div className="flex items-center gap-3">
-              <Clock className="w-8 h-8 text-purple-600" />
+              <Clock className="w-8 h-8 text-green-600" />
               <div>
-                <p className="text-sm text-purple-700 mb-1">Active Orders</p>
-                <p className="text-3xl font-bold text-purple-900">{activeOrders}</p>
+                <p className="text-sm text-green-700 mb-1">Active Orders</p>
+                <p className="text-3xl font-bold text-green-900">{activeOrders}</p>
               </div>
             </div>
           </Card>
@@ -217,12 +217,12 @@ export default function OrdersManagementPage() {
               </div>
             </div>
           </Card>
-          <Card className="p-4 bg-gradient-to-br from-amber-50 to-amber-100 border-amber-200">
+          <Card className="p-4 bg-gradient-to-br from-green-50 to-green-100 border-green-200">
             <div className="flex items-center gap-3">
-              <DollarSign className="w-8 h-8 text-amber-600" />
+              <DollarSign className="w-8 h-8 text-green-600" />
               <div>
-                <p className="text-sm text-amber-700 mb-1">Total Revenue</p>
-                <p className="text-2xl font-bold text-amber-900">LKR {totalRevenue.toLocaleString()}</p>
+                <p className="text-sm text-green-700 mb-1">Total Revenue</p>
+                <p className="text-2xl font-bold text-green-900">LKR {totalRevenue.toLocaleString()}</p>
               </div>
             </div>
           </Card>
@@ -297,7 +297,7 @@ export default function OrdersManagementPage() {
                           {order.items.length} item{order.items.length > 1 ? 's' : ''}
                         </Badge>
                       </TableCell>
-                      <TableCell className="font-bold text-amber-600">
+                      <TableCell className="font-bold text-green-600">
                         LKR {order.totalAmount.toLocaleString()}
                       </TableCell>
                       <TableCell>
@@ -369,8 +369,8 @@ export default function OrdersManagementPage() {
 
                 {/* Customer & Seller Info */}
                 <div className="grid grid-cols-2 gap-4">
-                  <Card className="p-4 bg-blue-50 border-blue-200">
-                    <Label className="text-blue-700">Customer Information</Label>
+                  <Card className="p-4 bg-green-50 border-green-200">
+                    <Label className="text-green-700">Customer Information</Label>
                     <div className="mt-2 space-y-1">
                       <p className="font-medium">{selectedOrder.buyerName}</p>
                       <p className="text-sm text-gray-600">{selectedOrder.buyerEmail}</p>
@@ -403,7 +403,7 @@ export default function OrdersManagementPage() {
                                   className={
                                     item.priceType === 'wholesale'
                                       ? 'bg-green-100 text-green-700 text-xs'
-                                      : 'bg-amber-100 text-amber-700 text-xs'
+                                      : 'bg-green-100 text-green-700 text-xs'
                                   }
                                 >
                                   {item.priceType}
@@ -412,7 +412,7 @@ export default function OrdersManagementPage() {
                             </div>
                           </div>
                           <div className="text-right">
-                            <p className="font-bold text-lg text-amber-600">
+                            <p className="font-bold text-lg text-green-600">
                               LKR {(item.quantity * item.price).toLocaleString()}
                             </p>
                           </div>
@@ -423,10 +423,10 @@ export default function OrdersManagementPage() {
                 </div>
 
                 {/* Total Amount */}
-                <Card className="p-4 bg-gradient-to-br from-amber-50 to-orange-50 border-amber-200">
+                <Card className="p-4 bg-gradient-to-br from-green-50 to-amber-50 border-green-200">
                   <div className="flex justify-between items-center">
                     <span className="text-lg font-medium text-gray-700">Total Amount</span>
-                    <span className="text-2xl font-bold text-amber-600">
+                    <span className="text-2xl font-bold text-green-600">
                       LKR {selectedOrder.totalAmount.toLocaleString()}
                     </span>
                   </div>

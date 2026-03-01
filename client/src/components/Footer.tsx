@@ -16,13 +16,13 @@ export const Footer: React.FC = () => {
               Connecting rural Sri Lankan sellers with buyers nationwide
             </p>
             <div className="flex space-x-3">
-              <a href="#" className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-amber-600 transition">
+              <a href="#" className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-green-600 transition">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a href="#" className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-amber-600 transition">
+              <a href="#" className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-green-600 transition">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="#" className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-amber-600 transition">
+              <a href="#" className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-green-600 transition">
                 <Twitter className="w-4 h-4" />
               </a>
             </div>
@@ -33,22 +33,22 @@ export const Footer: React.FC = () => {
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-400 hover:text-amber-400 transition">
+                <Link to="/" className="text-gray-400 hover:text-green-400 transition">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="text-gray-400 hover:text-amber-400 transition">
+                <Link to="/products" className="text-gray-400 hover:text-green-400 transition">
                   Products
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-400 hover:text-amber-400 transition">
+                <Link to="/about" className="text-gray-400 hover:text-green-400 transition">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-400 hover:text-amber-400 transition">
+                <Link to="/contact" className="text-gray-400 hover:text-green-400 transition">
                   Contact
                 </Link>
               </li>
@@ -60,22 +60,22 @@ export const Footer: React.FC = () => {
             <h3 className="font-bold text-lg mb-4">For Sellers</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/become-seller" className="text-gray-400 hover:text-amber-400 transition">
+                <Link to="/become-seller" className="text-gray-400 hover:text-green-400 transition">
                   Become a Seller
                 </Link>
               </li>
               <li>
-                <Link to="/login" className="text-gray-400 hover:text-amber-400 transition">
+                <Link to="/login" className="text-gray-400 hover:text-green-400 transition">
                   Seller Login
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-amber-400 transition">
+                <a href="#" className="text-gray-400 hover:text-green-400 transition">
                   Seller Guide
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-amber-400 transition">
+                <a href="#" className="text-gray-400 hover:text-green-400 transition">
                   FAQs
                 </a>
               </li>

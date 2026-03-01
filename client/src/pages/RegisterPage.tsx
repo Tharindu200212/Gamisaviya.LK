@@ -86,7 +86,7 @@ export const RegisterPage: React.FC = () => {
                   type="button"
                   onClick={() => setFormData({ ...formData, role: 'seller' })}
                   className={`py-2 rounded-lg font-semibold transition ${formData.role === 'seller'
-                      ? 'bg-amber-600 text-white'
+                      ? 'bg-green-600 text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                 >

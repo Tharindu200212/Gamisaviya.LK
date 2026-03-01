@@ -18,7 +18,7 @@ export function CartPage() {
         <div className="text-center">
           <ShoppingBag className="w-16 h-16 text-gray-400 mx-auto mb-4" />
           <h2 className="text-2xl font-bold mb-4">Please login to view cart</h2>
-          <Link to="/login?role=buyer" className="text-amber-700 hover:text-amber-800">
+          <Link to="/login?role=buyer" className="text-green-700 hover:text-green-800">
             Login as Buyer
           </Link>
         </div>
@@ -34,7 +34,7 @@ export function CartPage() {
           <h2 className="text-2xl font-bold mb-4">Your cart is empty</h2>
           <Link
             to="/products"
-            className="inline-block px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
+            className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
           >
             Continue Shopping
           </Link>
@@ -75,7 +75,7 @@ export function CartPage() {
                         <div>
                           <Link
                             to={`/product/${item.productId}`}
-                            className="font-semibold text-lg text-gray-900 hover:text-amber-700"
+                            className="font-semibold text-lg text-gray-900 hover:text-green-700"
                           >
                             {item.name}
                           </Link>
@@ -184,27 +184,27 @@ export function CartPage() {
                 </div>
                 <div className="flex justify-between text-lg font-bold mt-4 pt-4 border-t border-gray-200">
                   <span>Total</span>
-                  <span className="text-amber-700">LKR {(total + 300).toLocaleString()}</span>
+                  <span className="text-green-700">LKR {(total + 300).toLocaleString()}</span>
                 </div>
               </div>
 
               <button
                 onClick={() => navigate('/checkout')}
-                className="w-full py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-lg hover:from-amber-700 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl font-semibold"
+                className="w-full py-4 bg-gradient-to-r from-green-600 to-amber-600 text-white rounded-lg hover:from-green-700 hover:to-amber-700 transition-all shadow-lg hover:shadow-xl font-semibold"
               >
                 Proceed to Checkout
               </button>
 
               <Link
                 to="/products"
-                className="block text-center mt-4 text-amber-700 hover:text-amber-800 font-medium"
+                className="block text-center mt-4 text-green-700 hover:text-green-800 font-medium"
               >
                 Continue Shopping
               </Link>
 
               {/* Pricing Info */}
-              <div className="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
-                <p className="text-xs text-amber-900">
+              <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                <p className="text-xs text-green-900">
                   <strong>Note:</strong> Wholesale prices are automatically applied when you order the minimum quantity.
                 </p>
               </div>

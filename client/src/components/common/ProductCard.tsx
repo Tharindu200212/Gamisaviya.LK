@@ -27,14 +27,14 @@ export function ProductCard({ product }: ProductCardProps) {
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
         {product.featured && (
-          <div className="absolute top-3 right-3 bg-amber-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+          <div className="absolute top-3 right-3 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-medium">
             Featured
           </div>
         )}
       </div>
       
       <div className="p-4">
-        <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-amber-700 transition-colors">
+        <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-green-700 transition-colors">
           {name}
         </h3>
         
@@ -46,7 +46,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
         
         <div className="flex items-center space-x-1 mb-3">
-          <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+          <Star className="w-4 h-4 fill-green-400 text-green-400" />
           <span className="text-sm font-medium text-gray-900">{product.rating}</span>
           <span className="text-sm text-gray-500">({product.reviews})</span>
         </div>
@@ -63,10 +63,10 @@ export function ProductCard({ product }: ProductCardProps) {
               </div>
             </div>
             <div className="text-right">
-              <div className="text-xs text-amber-600 font-medium mb-1">
+              <div className="text-xs text-green-600 font-medium mb-1">
                 {t('wholesalePrice')}
               </div>
-              <div className="text-sm font-semibold text-amber-700">
+              <div className="text-sm font-semibold text-green-700">
                 LKR {product.wholesalePrice.toLocaleString()}
               </div>
               <div className="text-xs text-gray-500">

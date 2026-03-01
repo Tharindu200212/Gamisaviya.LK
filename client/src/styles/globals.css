@@ -8,23 +8,31 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #030213;
+  --primary: oklch(0.448 0.119 151.328);
+  /* green-800 */
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.95 0.0058 264.53);
-  --secondary-foreground: #030213;
-  --muted: #ececf0;
-  --muted-foreground: #717182;
-  --accent: #e9ebef;
-  --accent-foreground: #030213;
+  --secondary: oklch(0.962 0.044 156.743);
+  /* green-100 */
+  --secondary-foreground: oklch(0.448 0.119 151.328);
+  --muted: oklch(0.982 0.018 155.826);
+  /* green-50 */
+  --muted-foreground: oklch(0.527 0.154 150.069);
+  /* green-700 */
+  --accent: oklch(0.962 0.044 156.743);
+  /* green-100 */
+  --accent-foreground: oklch(0.393 0.095 152.535);
+  /* green-900 */
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
-  --border: rgba(0, 0, 0, 0.1);
+  --border: oklch(0.925 0.084 155.995);
+  /* green-200 */
   --input: transparent;
-  --input-background: #f3f3f5;
-  --switch-background: #cbced4;
+  --input-background: oklch(0.982 0.018 155.826);
+  --switch-background: oklch(0.925 0.084 155.995);
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: oklch(0.708 0 0);
+  --ring: oklch(0.627 0.194 149.214);
+  /* green-600 */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -33,12 +41,12 @@
   --radius: 0.625rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #030213;
+  --sidebar-primary: oklch(0.448 0.119 151.328);
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-accent: oklch(0.962 0.044 156.743);
+  --sidebar-accent-foreground: oklch(0.448 0.119 151.328);
+  --sidebar-border: oklch(0.925 0.084 155.995);
+  --sidebar-ring: oklch(0.627 0.194 149.214);
 }
 
 .dark {
@@ -190,6 +198,7 @@ html {
     transform: translateX(100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;

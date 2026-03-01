@@ -28,7 +28,7 @@ export function BuyerProfilePage() {
 
         <div className="bg-white rounded-xl shadow-lg p-8">
           <div className="flex items-center space-x-4 mb-8 pb-6 border-b border-gray-200">
-            <div className="w-20 h-20 bg-gradient-to-br from-amber-600 to-orange-700 rounded-full flex items-center justify-center">
+            <div className="w-20 h-20 bg-gradient-to-br from-green-600 to-amber-700 rounded-full flex items-center justify-center">
               <User className="w-10 h-10 text-white" />
             </div>
             <div>
@@ -45,7 +45,7 @@ export function BuyerProfilePage() {
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                 />
@@ -57,7 +57,7 @@ export function BuyerProfilePage() {
                 </label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
                 />
@@ -69,7 +69,7 @@ export function BuyerProfilePage() {
                 </label>
                 <input
                   type="tel"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                   value={formData.phone}
                   onChange={(e) => setFormData({...formData, phone: e.target.value})}
                 />
@@ -81,7 +81,7 @@ export function BuyerProfilePage() {
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                   value={formData.city}
                   onChange={(e) => setFormData({...formData, city: e.target.value})}
                 />
@@ -93,7 +93,7 @@ export function BuyerProfilePage() {
                 </label>
                 <textarea
                   rows={3}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                   value={formData.address}
                   onChange={(e) => setFormData({...formData, address: e.target.value})}
                 />
@@ -105,7 +105,7 @@ export function BuyerProfilePage() {
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                   value={formData.postalCode}
                   onChange={(e) => setFormData({...formData, postalCode: e.target.value})}
                 />
@@ -115,7 +115,7 @@ export function BuyerProfilePage() {
             <div className="flex justify-end pt-6 border-t border-gray-200">
               <button
                 type="submit"
-                className="flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-lg hover:from-amber-700 hover:to-orange-700 transition-all shadow-lg"
+                className="flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-green-600 to-amber-600 text-white rounded-lg hover:from-green-700 hover:to-amber-700 transition-all shadow-lg"
               >
                 <Save className="w-5 h-5" />
                 <span>Save Changes</span>

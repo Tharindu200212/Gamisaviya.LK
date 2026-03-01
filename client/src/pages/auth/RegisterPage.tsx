@@ -26,10 +26,10 @@ export function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-amber-50 to-green-100 flex items-center justify-center py-12 px-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl p-8">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-amber-600 to-orange-700 rounded-full mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-600 to-amber-700 rounded-full mb-4">
             <UserPlus className="w-8 h-8 text-white" />
           </div>
           <h2 className="text-3xl font-bold text-gray-900">Create Account</h2>
@@ -46,7 +46,7 @@ export function RegisterPage() {
                 type="button"
                 onClick={() => setRole('buyer')}
                 className={`py-3 px-4 rounded-lg font-medium transition-all ${
-                  role === 'buyer' ? 'bg-amber-600 text-white shadow-lg' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  role === 'buyer' ? 'bg-green-600 text-white shadow-lg' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 Buyer
@@ -55,7 +55,7 @@ export function RegisterPage() {
                 type="button"
                 onClick={() => setRole('seller')}
                 className={`py-3 px-4 rounded-lg font-medium transition-all ${
-                  role === 'seller' ? 'bg-amber-600 text-white shadow-lg' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  role === 'seller' ? 'bg-green-600 text-white shadow-lg' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 Seller
@@ -70,7 +70,7 @@ export function RegisterPage() {
               <input
                 type="text"
                 required
-                className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 value={formData.name}
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
               />
@@ -84,7 +84,7 @@ export function RegisterPage() {
               <input
                 type="email"
                 required
-                className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
               />
@@ -98,7 +98,7 @@ export function RegisterPage() {
               <input
                 type="password"
                 required
-                className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 value={formData.password}
                 onChange={(e) => setFormData({...formData, password: e.target.value})}
               />
@@ -112,7 +112,7 @@ export function RegisterPage() {
               <input
                 type="password"
                 required
-                className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 value={formData.confirmPassword}
                 onChange={(e) => setFormData({...formData, confirmPassword: e.target.value})}
               />
@@ -121,7 +121,7 @@ export function RegisterPage() {
 
           <button
             type="submit"
-            className="w-full py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-lg hover:from-amber-700 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl font-semibold"
+            className="w-full py-4 bg-gradient-to-r from-green-600 to-amber-600 text-white rounded-lg hover:from-green-700 hover:to-amber-700 transition-all shadow-lg hover:shadow-xl font-semibold"
           >
             Create Account
           </button>
@@ -130,7 +130,7 @@ export function RegisterPage() {
         <div className="mt-6 text-center">
           <p className="text-gray-600">
             Already have an account?{' '}
-            <Link to="/login" className="text-amber-700 hover:text-amber-800 font-medium">
+            <Link to="/login" className="text-green-700 hover:text-green-800 font-medium">
               Sign in
             </Link>
           </p>

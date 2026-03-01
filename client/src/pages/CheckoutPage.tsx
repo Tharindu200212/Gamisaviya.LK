@@ -72,7 +72,7 @@ export const CheckoutPage: React.FC = () => {
               {/* Shipping Information */}
               <div className="bg-white rounded-xl shadow-md p-6">
                 <div className="flex items-center mb-6">
-                  <MapPin className="w-6 h-6 text-amber-600 mr-2" />
+                  <MapPin className="w-6 h-6 text-green-600 mr-2" />
                   <h2 className="text-xl font-bold text-gray-900">Shipping Information</h2>
                 </div>
 
@@ -86,7 +86,7 @@ export const CheckoutPage: React.FC = () => {
                       required
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                     />
                   </div>
                   <div>
@@ -98,7 +98,7 @@ export const CheckoutPage: React.FC = () => {
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                       placeholder="+94 XX XXX XXXX"
                     />
                   </div>
@@ -110,7 +110,7 @@ export const CheckoutPage: React.FC = () => {
                       required
                       value={formData.address}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                       rows={3}
                     />
                   </div>
@@ -123,7 +123,7 @@ export const CheckoutPage: React.FC = () => {
                       required
                       value={formData.city}
                       onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                     />
                   </div>
                   <div>
@@ -134,7 +134,7 @@ export const CheckoutPage: React.FC = () => {
                       required
                       value={formData.district}
                       onChange={(e) => setFormData({ ...formData, district: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                     >
                       <option value="">Select District</option>
                       <option value="Colombo">Colombo</option>
@@ -150,30 +150,30 @@ export const CheckoutPage: React.FC = () => {
               {/* Payment Method */}
               <div className="bg-white rounded-xl shadow-md p-6">
                 <div className="flex items-center mb-6">
-                  <CreditCard className="w-6 h-6 text-amber-600 mr-2" />
+                  <CreditCard className="w-6 h-6 text-green-600 mr-2" />
                   <h2 className="text-xl font-bold text-gray-900">Payment Method</h2>
                 </div>
 
                 <div className="space-y-3">
-                  <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-amber-300 transition">
+                  <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-green-300 transition">
                     <input
                       type="radio"
                       name="payment"
                       value="cod"
                       checked={formData.paymentMethod === 'cod'}
                       onChange={(e) => setFormData({ ...formData, paymentMethod: e.target.value })}
-                      className="w-5 h-5 text-amber-600"
+                      className="w-5 h-5 text-green-600"
                     />
                     <span className="ml-3 font-semibold text-gray-900">Cash on Delivery</span>
                   </label>
-                  <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-amber-300 transition">
+                  <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-green-300 transition">
                     <input
                       type="radio"
                       name="payment"
                       value="bank"
                       checked={formData.paymentMethod === 'bank'}
                       onChange={(e) => setFormData({ ...formData, paymentMethod: e.target.value })}
-                      className="w-5 h-5 text-amber-600"
+                      className="w-5 h-5 text-green-600"
                     />
                     <span className="ml-3 font-semibold text-gray-900">Bank Transfer</span>
                   </label>
@@ -182,7 +182,7 @@ export const CheckoutPage: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full px-6 py-4 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition font-semibold text-lg"
+                className="w-full px-6 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-semibold text-lg"
               >
                 Place Order
               </button>
@@ -215,7 +215,7 @@ export const CheckoutPage: React.FC = () => {
                             <span className="text-xs text-green-600 font-semibold">Wholesale</span>
                           </div>
                         )}
-                        <p className="text-sm font-bold text-amber-600 mt-1">
+                        <p className="text-sm font-bold text-green-600 mt-1">
                           LKR {price * item.quantity}
                         </p>
                       </div>
@@ -235,7 +235,7 @@ export const CheckoutPage: React.FC = () => {
                 </div>
                 <div className="border-t pt-3 flex justify-between items-center">
                   <span className="text-lg font-bold text-gray-900">Total:</span>
-                  <span className="text-3xl font-bold text-amber-600">LKR {cartTotal}</span>
+                  <span className="text-3xl font-bold text-green-600">LKR {cartTotal}</span>
                 </div>
               </div>
             </div>

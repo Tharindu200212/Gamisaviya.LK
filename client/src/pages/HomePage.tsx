@@ -20,7 +20,7 @@ export const HomePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* Responsive Full Width Hero Banner Section */}
       <section className="relative w-full bg-gray-900 border-b border-gray-800">
         <div className="relative w-full">
@@ -100,22 +100,22 @@ export const HomePage: React.FC = () => {
       {/* Promotional Ad Banner */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-r from-amber-600 to-orange-500">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-r from-green-600 to-amber-500">
             {/* Background Decorative Pattern/Overlay */}
             <div className="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
             <div className="absolute -right-20 -top-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-            <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-amber-300/20 rounded-full blur-3xl"></div>
+            <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-green-300/20 rounded-full blur-3xl"></div>
 
             <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="text-center md:text-left">
                 <span className="inline-flex items-center px-3 py-1 bg-white/20 text-white rounded-full text-sm font-bold tracking-wider uppercase mb-4 backdrop-blur-md shadow-sm border border-white/20">
-                  <span className="w-2 h-2 rounded-full bg-amber-200 mr-2 animate-pulse"></span>
+                  <span className="w-2 h-2 rounded-full bg-green-200 mr-2 animate-pulse"></span>
                   {language === 'en' ? 'Limited Time Offer' : 'සීමිත කාල දීමනාවක්'}
                 </span>
                 <h3 className="text-3xl md:text-5xl font-extrabold text-white mb-3 tracking-tight">
                   {language === 'en' ? 'Save 20% on Wholesale' : 'තොග මිලදී ගැනුම් මත 20%ක් ඉතිරි කරන්න'}
                 </h3>
-                <p className="text-amber-50 text-lg md:text-xl max-w-2xl font-medium">
+                <p className="text-green-50 text-lg md:text-xl max-w-2xl font-medium">
                   {language === 'en'
                     ? 'Stock up on premium Sri Lankan spices, organic oils, and pure honey. Direct from the village to your business.'
                     : 'සුවිශේෂී ශ්‍රී ලාංකීය කුළුබඩු, කාබනික තෙල් සහ පිරිසිදු මී පැණි මිලදී ගන්න. ගමෙන් කෙළින්ම ඔබේ ව්‍යාපාරයට.'}
@@ -124,7 +124,7 @@ export const HomePage: React.FC = () => {
               <div className="flex-shrink-0">
                 <Link
                   to="/products"
-                  className="group inline-flex items-center justify-center px-8 py-4 text-amber-700 bg-white hover:bg-gray-50 rounded-xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+                  className="group inline-flex items-center justify-center px-8 py-4 text-green-700 bg-white hover:bg-gray-50 rounded-xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]"
                 >
                   {language === 'en' ? 'Claim Offer Now' : 'දීමනාව ලබා ගන්න'}
                   <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" />
@@ -238,7 +238,7 @@ export const HomePage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {language === 'en' ? 'Ready to Start Selling?' : 'විකිණීම ආරම්භ කිරීමට සූදානම්ද?'}
           </h2>
-          <p className="text-xl mb-8 text-amber-50">
+          <p className="text-xl mb-8 text-green-50">
             {language === 'en'
               ? 'Join our community of rural sellers and reach customers across Sri Lanka'
               : 'අපගේ ග්‍රාමීය විකුණුම්කරුවන්ගේ ප්‍රජාවට එක්වී ශ්‍රී ලංකාව පුරා ගනුදෙනුකරුවන් වෙත ළඟා වන්න'}

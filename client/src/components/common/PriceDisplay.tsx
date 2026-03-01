@@ -56,7 +56,7 @@ export function PriceDisplay({
         <div className="border-t border-gray-200 pt-2 mt-2">
           <div className="flex justify-between items-center">
             <span className="font-semibold text-gray-900">Total</span>
-            <span className="text-2xl font-bold text-amber-700">
+            <span className="text-2xl font-bold text-green-700">
               LKR {totalPrice.toLocaleString()}
             </span>
           </div>
@@ -72,22 +72,22 @@ export function PriceDisplay({
       {/* Pricing Details */}
       {showDetails && (
         <div className="grid grid-cols-2 gap-3">
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-            <div className="text-xs text-blue-600 font-medium mb-1">{t('retailPrice')}</div>
-            <div className="text-lg font-bold text-blue-900">
+          <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+            <div className="text-xs text-green-600 font-medium mb-1">{t('retailPrice')}</div>
+            <div className="text-lg font-bold text-green-900">
               LKR {retailPrice.toLocaleString()}
             </div>
-            <div className="text-xs text-blue-600 mt-1">
+            <div className="text-xs text-green-600 mt-1">
               1-{wholesaleThreshold - 1} items
             </div>
           </div>
           
-          <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
-            <div className="text-xs text-amber-600 font-medium mb-1">{t('wholesalePrice')}</div>
-            <div className="text-lg font-bold text-amber-900">
+          <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+            <div className="text-xs text-green-600 font-medium mb-1">{t('wholesalePrice')}</div>
+            <div className="text-lg font-bold text-green-900">
               LKR {wholesalePrice.toLocaleString()}
             </div>
-            <div className="text-xs text-amber-600 mt-1">
+            <div className="text-xs text-green-600 mt-1">
               {wholesaleThreshold}+ items
             </div>
           </div>

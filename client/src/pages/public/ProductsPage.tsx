@@ -57,7 +57,7 @@ export function ProductsPage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <Loader2 className="w-8 h-8 animate-spin text-amber-600" />
+        <Loader2 className="w-8 h-8 animate-spin text-green-600" />
       </div>
     );
   }
@@ -82,7 +82,7 @@ export function ProductsPage() {
               placeholder="Search products..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+              className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
           <button
@@ -115,7 +115,7 @@ export function ProductsPage() {
                         key={category}
                         onClick={() => setSelectedCategory(category)}
                         className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${selectedCategory === category
-                            ? 'bg-amber-600 text-white'
+                            ? 'bg-green-600 text-white'
                             : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
                           }`}
                       >
@@ -136,7 +136,7 @@ export function ProductsPage() {
                       step="100"
                       value={priceRange[1]}
                       onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
-                      className="w-full accent-amber-600"
+                      className="w-full accent-green-600"
                     />
                     <div className="flex items-center justify-between text-sm text-gray-600">
                       <span>LKR 0</span>
@@ -146,9 +146,9 @@ export function ProductsPage() {
                 </div>
 
                 {/* Pricing Info */}
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-amber-900 mb-2">Wholesale Pricing</h4>
-                  <p className="text-sm text-amber-800">
+                <div className="bg-gradient-to-br from-green-50 to-amber-50 border border-green-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-900 mb-2">Wholesale Pricing</h4>
+                  <p className="text-sm text-green-800">
                     All products offer wholesale prices for bulk orders. Check individual product pages for details.
                   </p>
                 </div>
@@ -160,7 +160,7 @@ export function ProductsPage() {
                     setSelectedCategory('All');
                     setPriceRange([0, 10000]);
                   }}
-                  className="w-full px-4 py-2 text-amber-700 border border-amber-700 rounded-lg hover:bg-amber-50 transition-colors"
+                  className="w-full px-4 py-2 text-green-700 border border-green-700 rounded-lg hover:bg-green-50 transition-colors"
                 >
                   Reset Filters
                 </button>
@@ -191,7 +191,7 @@ export function ProductsPage() {
                     setSelectedCategory('All');
                     setPriceRange([0, 10000]);
                   }}
-                  className="mt-4 text-amber-700 hover:text-amber-800 font-medium"
+                  className="mt-4 text-green-700 hover:text-green-800 font-medium"
                 >
                   Clear all filters
                 </button>

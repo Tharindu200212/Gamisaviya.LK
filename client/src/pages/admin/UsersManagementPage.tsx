@@ -182,9 +182,9 @@ export default function UsersManagementPage() {
 
   const getRoleBadge = (role: string) => {
     const colors = {
-      admin: 'bg-purple-100 text-purple-700 border-purple-200',
+      admin: 'bg-green-100 text-green-700 border-green-200',
       seller: 'bg-green-100 text-green-700 border-green-200',
-      buyer: 'bg-blue-100 text-blue-700 border-blue-200',
+      buyer: 'bg-green-100 text-green-700 border-green-200',
     };
     return colors[role as keyof typeof colors] || colors.buyer;
   };
@@ -197,7 +197,7 @@ export default function UsersManagementPage() {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">
-            <Users className="w-10 h-10 text-blue-600" />
+            <Users className="w-10 h-10 text-green-600" />
             <h1 className="text-3xl font-bold text-gray-900">User Management</h1>
           </div>
           <p className="text-gray-600">Manage all platform users and their accounts</p>
@@ -205,13 +205,13 @@ export default function UsersManagementPage() {
 
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-          <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
-            <p className="text-sm text-blue-700 mb-1">Total Users</p>
-            <p className="text-3xl font-bold text-blue-900">{users.length}</p>
+          <Card className="p-4 bg-gradient-to-br from-green-50 to-green-100 border-green-200">
+            <p className="text-sm text-green-700 mb-1">Total Users</p>
+            <p className="text-3xl font-bold text-green-900">{users.length}</p>
           </Card>
-          <Card className="p-4 bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
-            <p className="text-sm text-purple-700 mb-1">Admins</p>
-            <p className="text-3xl font-bold text-purple-900">
+          <Card className="p-4 bg-gradient-to-br from-green-50 to-green-100 border-green-200">
+            <p className="text-sm text-green-700 mb-1">Admins</p>
+            <p className="text-3xl font-bold text-green-900">
               {users.filter((u) => u.role === 'admin').length}
             </p>
           </Card>
@@ -221,9 +221,9 @@ export default function UsersManagementPage() {
               {users.filter((u) => u.role === 'seller').length}
             </p>
           </Card>
-          <Card className="p-4 bg-gradient-to-br from-amber-50 to-amber-100 border-amber-200">
-            <p className="text-sm text-amber-700 mb-1">Buyers</p>
-            <p className="text-3xl font-bold text-amber-900">
+          <Card className="p-4 bg-gradient-to-br from-green-50 to-green-100 border-green-200">
+            <p className="text-sm text-green-700 mb-1">Buyers</p>
+            <p className="text-3xl font-bold text-green-900">
               {users.filter((u) => u.role === 'buyer').length}
             </p>
           </Card>
@@ -487,7 +487,7 @@ export default function UsersManagementPage() {
               <Button variant="outline" onClick={() => setIsEditDialogOpen(false)}>
                 Cancel
               </Button>
-              <Button onClick={handleEditUser} className="bg-blue-600 hover:bg-blue-700">
+              <Button onClick={handleEditUser} className="bg-green-600 hover:bg-green-700">
                 Save Changes
               </Button>
             </DialogFooter>

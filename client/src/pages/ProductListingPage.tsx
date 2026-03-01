@@ -137,7 +137,7 @@ export const ProductListingPage: React.FC = () => {
   if (loading && products.length === 0) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <Loader2 className="w-10 h-10 animate-spin text-amber-600" />
+        <Loader2 className="w-10 h-10 animate-spin text-green-600" />
       </div>
     );
   }

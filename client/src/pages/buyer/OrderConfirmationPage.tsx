@@ -18,10 +18,10 @@ export function OrderConfirmationPage() {
           Thank you for your order. We've received your order and will process it soon.
         </p>
 
-        <div className="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-6 mb-8">
+        <div className="bg-gradient-to-br from-green-50 to-amber-50 border border-green-200 rounded-xl p-6 mb-8">
           <div className="text-sm text-gray-600 mb-2">Order ID</div>
-          <div className="text-2xl font-bold text-amber-700 mb-4">{orderId}</div>
-          <div className="flex justify-between text-sm border-t border-amber-200 pt-4">
+          <div className="text-2xl font-bold text-green-700 mb-4">{orderId}</div>
+          <div className="flex justify-between text-sm border-t border-green-200 pt-4">
             <span className="text-gray-600">Items:</span>
             <span className="font-semibold">{items}</span>
           </div>
@@ -34,7 +34,7 @@ export function OrderConfirmationPage() {
         <div className="space-y-3">
           <Link
             to="/buyer/orders"
-            className="flex items-center justify-center space-x-2 w-full py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-semibold"
+            className="flex items-center justify-center space-x-2 w-full py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold"
           >
             <Package className="w-5 h-5" />
             <span>View My Orders</span>
@@ -48,7 +48,7 @@ export function OrderConfirmationPage() {
           </Link>
         </div>
 
-        <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-800">
+        <div className="mt-8 p-4 bg-green-50 border border-green-200 rounded-lg text-sm text-green-800">
           <strong>Note:</strong> Wholesale pricing was automatically applied to eligible items in your order.
         </div>
       </div>

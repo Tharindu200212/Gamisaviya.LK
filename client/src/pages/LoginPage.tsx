@@ -84,7 +84,7 @@ export const LoginPage: React.FC = () => {
                   type="button"
                   onClick={() => setRole('seller')}
                   className={`py-2 rounded-lg font-semibold transition ${role === 'seller'
-                      ? 'bg-amber-600 text-white'
+                      ? 'bg-green-600 text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                 >
@@ -94,7 +94,7 @@ export const LoginPage: React.FC = () => {
                   type="button"
                   onClick={() => setRole('admin')}
                   className={`py-2 rounded-lg font-semibold transition ${role === 'admin'
-                      ? 'bg-amber-600 text-white'
+                      ? 'bg-green-600 text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                 >

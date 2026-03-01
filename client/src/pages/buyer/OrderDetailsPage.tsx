@@ -36,8 +36,8 @@ export const OrderDetailsPage: React.FC = () => {
     const getStatusColor = (status: string) => {
         switch (status) {
             case 'pending': return 'bg-yellow-100 text-yellow-800';
-            case 'processing': return 'bg-blue-100 text-blue-800';
-            case 'shipped': return 'bg-purple-100 text-purple-800';
+            case 'processing': return 'bg-green-100 text-green-800';
+            case 'shipped': return 'bg-green-100 text-green-800';
             case 'delivered': return 'bg-green-100 text-green-800';
             case 'cancelled': return 'bg-red-100 text-red-800';
             default: return 'bg-gray-100 text-gray-800';
@@ -59,7 +59,7 @@ export const OrderDetailsPage: React.FC = () => {
     if (loading) {
         return (
             <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-                <Loader2 className="w-8 h-8 animate-spin text-amber-600" />
+                <Loader2 className="w-8 h-8 animate-spin text-green-600" />
             </div>
         );
     }
@@ -71,7 +71,7 @@ export const OrderDetailsPage: React.FC = () => {
                     <AlertCircle className="w-16 h-16 text-red-500 mx-auto mb-4" />
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">Error Loading Order</h2>
                     <p className="text-gray-600 mb-6">{error || 'Order not found'}</p>
-                    <button onClick={() => navigate('/buyer/orders')} className="text-amber-600 hover:text-amber-700 font-medium">
+                    <button onClick={() => navigate('/buyer/orders')} className="text-green-600 hover:text-green-700 font-medium">
                         Back to My Orders
                     </button>
                 </div>
@@ -106,7 +106,7 @@ export const OrderDetailsPage: React.FC = () => {
                         {/* Order Items */}
                         <div>
                             <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                                <Package className="w-5 h-5 mr-2 text-amber-600" />
+                                <Package className="w-5 h-5 mr-2 text-green-600" />
                                 Order Items
                             </h2>
                             <div className="space-y-4">
@@ -136,7 +136,7 @@ export const OrderDetailsPage: React.FC = () => {
                             {/* Shipping Info */}
                             <div>
                                 <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                                    <MapPin className="w-5 h-5 mr-2 text-amber-600" />
+                                    <MapPin className="w-5 h-5 mr-2 text-green-600" />
                                     Shipping Details
                                 </h2>
                                 <div className="bg-gray-50 rounded-lg p-4 text-sm text-gray-700 space-y-2">
@@ -149,7 +149,7 @@ export const OrderDetailsPage: React.FC = () => {
                             {/* Payment Info */}
                             <div>
                                 <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                                    <CreditCard className="w-5 h-5 mr-2 text-amber-600" />
+                                    <CreditCard className="w-5 h-5 mr-2 text-green-600" />
                                     Payment Summary
                                 </h2>
                                 <div className="bg-gray-50 rounded-lg p-4 space-y-3">

@@ -24,7 +24,7 @@ export function ProductDetailPage() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-4">Product not found</h2>
-          <Link to="/products" className="text-amber-700 hover:text-amber-800">
+          <Link to="/products" className="text-green-700 hover:text-green-800">
             Back to Products
           </Link>
         </div>
@@ -89,9 +89,9 @@ export function ProductDetailPage() {
 
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-600 mb-6">
-          <Link to="/" className="hover:text-amber-700">Home</Link>
+          <Link to="/" className="hover:text-green-700">Home</Link>
           <span className="mx-2">/</span>
-          <Link to="/products" className="hover:text-amber-700">Products</Link>
+          <Link to="/products" className="hover:text-green-700">Products</Link>
           <span className="mx-2">/</span>
           <span className="text-gray-900">{name}</span>
         </nav>
@@ -108,7 +108,7 @@ export function ProductDetailPage() {
             </div>
             <div className="grid grid-cols-3 gap-3">
               {product.images.slice(0, 3).map((img, idx) => (
-                <div key={idx} className="aspect-square rounded-lg overflow-hidden border-2 border-amber-200 cursor-pointer hover:border-amber-500 transition-colors">
+                <div key={idx} className="aspect-square rounded-lg overflow-hidden border-2 border-green-200 cursor-pointer hover:border-green-500 transition-colors">
                   <img
                     src={getImage(img)}
                     alt={`${name} ${idx + 1}`}
@@ -134,7 +134,7 @@ export function ProductDetailPage() {
                     key={i}
                     className={`w-5 h-5 ${
                       i < Math.floor(product.rating)
-                        ? 'fill-amber-400 text-amber-400'
+                        ? 'fill-green-400 text-green-400'
                         : 'text-gray-300'
                     }`}
                   />
@@ -145,10 +145,10 @@ export function ProductDetailPage() {
             </div>
 
             {/* Seller Info */}
-            <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg p-4 border border-amber-200">
+            <div className="bg-gradient-to-r from-green-50 to-amber-50 rounded-lg p-4 border border-green-200">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
                     <User className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -161,7 +161,7 @@ export function ProductDetailPage() {
                 </div>
                 <Link
                   to={`/seller/${product.sellerId}`}
-                  className="text-amber-700 hover:text-amber-800 text-sm font-medium"
+                  className="text-green-700 hover:text-green-800 text-sm font-medium"
                 >
                   View Shop
                 </Link>
@@ -231,14 +231,14 @@ export function ProductDetailPage() {
             <div className="flex space-x-4 pt-4">
               <button
                 onClick={handleAddToCart}
-                className="flex-1 flex items-center justify-center space-x-2 px-6 py-4 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors shadow-lg hover:shadow-xl"
+                className="flex-1 flex items-center justify-center space-x-2 px-6 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl"
               >
                 <ShoppingCart className="w-5 h-5" />
                 <span className="font-semibold">{t('addToCart')}</span>
               </button>
               <button
                 onClick={handleBuyNow}
-                className="flex-1 px-6 py-4 bg-gradient-to-r from-orange-600 to-amber-600 text-white rounded-lg hover:from-orange-700 hover:to-amber-700 transition-all shadow-lg hover:shadow-xl font-semibold"
+                className="flex-1 px-6 py-4 bg-gradient-to-r from-amber-600 to-green-600 text-white rounded-lg hover:from-amber-700 hover:to-green-700 transition-all shadow-lg hover:shadow-xl font-semibold"
               >
                 {t('buyNow')}
               </button>

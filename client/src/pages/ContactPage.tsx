@@ -29,7 +29,7 @@ export const ContactPage: React.FC = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="bg-white rounded-xl p-6 shadow-md">
-              <Mail className="w-8 h-8 text-amber-600 mb-3" />
+              <Mail className="w-8 h-8 text-green-600 mb-3" />
               <h3 className="font-bold text-lg text-gray-900 mb-2">Email</h3>
               <p className="text-gray-600">info@gamisaviya.lk</p>
             </div>
@@ -39,7 +39,7 @@ export const ContactPage: React.FC = () => {
               <p className="text-gray-600">+94 11 234 5678</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-md">
-              <MapPin className="w-8 h-8 text-blue-600 mb-3" />
+              <MapPin className="w-8 h-8 text-green-600 mb-3" />
               <h3 className="font-bold text-lg text-gray-900 mb-2">Address</h3>
               <p className="text-gray-600">
                 123 Main Street<br />
@@ -65,7 +65,7 @@ export const ContactPage: React.FC = () => {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                 />
               </div>
               <div>
@@ -75,7 +75,7 @@ export const ContactPage: React.FC = () => {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                 />
               </div>
               <div>
@@ -85,7 +85,7 @@ export const ContactPage: React.FC = () => {
                   required
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                 />
               </div>
               <div>
@@ -94,13 +94,13 @@ export const ContactPage: React.FC = () => {
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                   rows={5}
                 />
               </div>
               <button
                 type="submit"
-                className="w-full flex items-center justify-center px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition font-semibold"
+                className="w-full flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-semibold"
               >
                 <Send className="w-5 h-5 mr-2" />
                 Send Message

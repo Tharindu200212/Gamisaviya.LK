@@ -96,7 +96,7 @@ export default function DatabaseViewerPage() {
 
   if (user?.role !== 'admin') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-red-50 to-amber-50 flex items-center justify-center p-4">
         <Card className="p-8 text-center max-w-md">
           <XCircle className="w-16 h-16 text-red-500 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Access Denied</h2>
@@ -108,9 +108,9 @@ export default function DatabaseViewerPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-green-50 to-amber-50 flex items-center justify-center">
         <div className="text-center">
-          <Loader2 className="w-12 h-12 text-amber-600 animate-spin mx-auto mb-4" />
+          <Loader2 className="w-12 h-12 text-green-600 animate-spin mx-auto mb-4" />
           <p className="text-gray-600">Loading database...</p>
         </div>
       </div>
@@ -118,7 +118,7 @@ export default function DatabaseViewerPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-amber-50 py-8">
       <div className="container mx-auto px-4">
         <BackButton to="/admin/dashboard" />
         
@@ -126,7 +126,7 @@ export default function DatabaseViewerPage() {
         <div className="mb-8">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center">
                 <Database className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -238,11 +238,11 @@ export default function DatabaseViewerPage() {
 // Stat Card Component
 function StatCard({ icon: Icon, label, value, color }: any) {
   const colorClasses = {
-    blue: 'bg-blue-100 text-blue-600',
+    blue: 'bg-green-100 text-green-600',
     green: 'bg-green-100 text-green-600',
-    purple: 'bg-purple-100 text-purple-600',
-    orange: 'bg-orange-100 text-orange-600',
-    amber: 'bg-amber-100 text-amber-600',
+    purple: 'bg-green-100 text-green-600',
+    orange: 'bg-amber-100 text-amber-600',
+    amber: 'bg-green-100 text-green-600',
   };
 
   return (
@@ -270,7 +270,7 @@ function DatabaseOverview({ stats, users, products, orders, sellers }: any) {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       <Card className="p-6">
         <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <Users className="w-5 h-5 text-blue-600" />
+          <Users className="w-5 h-5 text-green-600" />
           Recent Users
         </h3>
         <div className="space-y-3">
@@ -304,7 +304,7 @@ function DatabaseOverview({ stats, users, products, orders, sellers }: any) {
                 <Badge variant={product.approved ? 'default' : 'secondary'}>
                   {product.approved ? 'Approved' : 'Pending'}
                 </Badge>
-                <p className="font-bold text-amber-600">Rs.{product.retailPrice}</p>
+                <p className="font-bold text-green-600">Rs.{product.retailPrice}</p>
               </div>
             </div>
           ))}
@@ -313,7 +313,7 @@ function DatabaseOverview({ stats, users, products, orders, sellers }: any) {
 
       <Card className="p-6 lg:col-span-2">
         <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <ShoppingCart className="w-5 h-5 text-purple-600" />
+          <ShoppingCart className="w-5 h-5 text-green-600" />
           Recent Orders
         </h3>
         <div className="space-y-3">
@@ -384,8 +384,8 @@ function UsersTable({ users, searchTerm }: any) {
               <tr key={user.id} className="hover:bg-gray-50">
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="flex items-center">
-                    <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center">
-                      <span className="text-amber-700 font-semibold">
+                    <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                      <span className="text-green-700 font-semibold">
                         {user.name?.charAt(0) || 'U'}
                       </span>
                     </div>
@@ -628,13 +628,13 @@ function SellersTable({ sellers, pendingSellers, searchTerm }: any) {
   return (
     <div className="space-y-6">
       {pendingSellers.length > 0 && (
-        <Card className="p-6 border-amber-200 bg-amber-50">
-          <h3 className="text-lg font-bold text-amber-900 mb-4">
+        <Card className="p-6 border-green-200 bg-green-50">
+          <h3 className="text-lg font-bold text-green-900 mb-4">
             ⏳ Pending Seller Approvals ({pendingSellers.length})
           </h3>
           <div className="space-y-3">
             {pendingSellers.map((seller: any) => (
-              <div key={seller.id} className="bg-white p-4 rounded-lg border border-amber-200">
+              <div key={seller.id} className="bg-white p-4 rounded-lg border border-green-200">
                 <div className="flex items-start justify-between">
                   <div>
                     <p className="font-semibold text-gray-900">{seller.name}</p>

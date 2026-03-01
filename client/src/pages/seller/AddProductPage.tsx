@@ -130,7 +130,7 @@ export const AddProductPage: React.FC = () => {
             <div className="flex gap-4 justify-center">
               <button
                 onClick={() => navigate('/seller/products')}
-                className="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition"
+                className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
               >
                 View My Products
               </button>
@@ -150,7 +150,7 @@ export const AddProductPage: React.FC = () => {
   if (fetching) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <Loader2 className="w-8 h-8 animate-spin text-amber-600" />
+        <Loader2 className="w-8 h-8 animate-spin text-green-600" />
       </div>
     );
   }
@@ -177,7 +177,7 @@ export const AddProductPage: React.FC = () => {
                 Product Images
               </label>
               <div
-                className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-amber-400 transition cursor-pointer relative"
+                className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-green-400 transition cursor-pointer relative"
                 onClick={() => document.getElementById('imageInput')?.click()}
               >
                 {imagePreview ? (
@@ -218,7 +218,7 @@ export const AddProductPage: React.FC = () => {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                   placeholder="e.g., Organic Rice"
                 />
               </div>
@@ -231,7 +231,7 @@ export const AddProductPage: React.FC = () => {
                   required
                   value={formData.namesin}
                   onChange={(e) => setFormData({ ...formData, namesin: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                   placeholder="e.g., කාබනික සහල්"
                 />
               </div>
@@ -247,7 +247,7 @@ export const AddProductPage: React.FC = () => {
                   required
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                   rows={4}
                 />
               </div>
@@ -259,7 +259,7 @@ export const AddProductPage: React.FC = () => {
                   required
                   value={formData.descriptionsin}
                   onChange={(e) => setFormData({ ...formData, descriptionsin: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                   rows={4}
                 />
               </div>
@@ -274,7 +274,7 @@ export const AddProductPage: React.FC = () => {
                 required
                 value={formData.category}
                 onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
               >
                 <option value="">Select Category</option>
                 <option value="Grains & Rice">Grains & Rice</option>
@@ -289,9 +289,9 @@ export const AddProductPage: React.FC = () => {
             </div>
 
             {/* Dual Pricing Section */}
-            <div className="bg-amber-50 border-2 border-amber-200 rounded-lg p-6">
+            <div className="bg-green-50 border-2 border-green-200 rounded-lg p-6">
               <div className="flex items-center mb-4">
-                <Package className="w-6 h-6 text-amber-600 mr-2" />
+                <Package className="w-6 h-6 text-green-600 mr-2" />
                 <h3 className="text-lg font-bold text-gray-900">Dual Pricing Setup</h3>
               </div>
               <p className="text-sm text-gray-600 mb-4">
@@ -308,7 +308,7 @@ export const AddProductPage: React.FC = () => {
                     required
                     value={formData.retailPrice}
                     onChange={(e) => setFormData({ ...formData, retailPrice: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                     placeholder="250"
                   />
                 </div>
@@ -321,7 +321,7 @@ export const AddProductPage: React.FC = () => {
                     required
                     value={formData.wholesalePrice}
                     onChange={(e) => setFormData({ ...formData, wholesalePrice: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                     placeholder="200"
                   />
                 </div>
@@ -336,7 +336,7 @@ export const AddProductPage: React.FC = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, wholesaleThreshold: e.target.value })
                     }
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                     placeholder="10"
                   />
                 </div>
@@ -356,7 +356,7 @@ export const AddProductPage: React.FC = () => {
                 required
                 value={formData.stock}
                 onChange={(e) => setFormData({ ...formData, stock: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                 placeholder="100"
               />
             </div>
@@ -366,7 +366,7 @@ export const AddProductPage: React.FC = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex-1 px-6 py-4 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition font-semibold flex items-center justify-center"
+                className="flex-1 px-6 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-semibold flex items-center justify-center"
               >
                 {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : (isEditing ? 'Save Changes' : 'Submit for Approval')}
               </button>

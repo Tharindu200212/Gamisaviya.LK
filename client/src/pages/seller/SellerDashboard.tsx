@@ -60,7 +60,7 @@ export const SellerDashboard: React.FC = () => {
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <Loader2 className="w-8 h-8 animate-spin text-amber-600" />
+        <Loader2 className="w-8 h-8 animate-spin text-green-600" />
       </div>
     );
   }
@@ -88,7 +88,7 @@ export const SellerDashboard: React.FC = () => {
             onClick={() => navigate('/seller/products')}
             className="bg-white rounded-xl p-6 border-2 border-gray-200 cursor-pointer hover:shadow-lg transition"
           >
-            <Package className="w-10 h-10 mb-3 text-amber-500" />
+            <Package className="w-10 h-10 mb-3 text-green-500" />
             <p className="text-3xl font-bold text-gray-900 mb-1">{stats.productCount}</p>
             <p className="text-gray-600">Total Products</p>
           </div>
@@ -97,13 +97,13 @@ export const SellerDashboard: React.FC = () => {
             onClick={() => navigate('/seller/orders')}
             className="bg-white rounded-xl p-6 border-2 border-gray-200 cursor-pointer hover:shadow-lg transition"
           >
-            <ShoppingBag className="w-10 h-10 mb-3 text-blue-500" />
+            <ShoppingBag className="w-10 h-10 mb-3 text-green-500" />
             <p className="text-3xl font-bold text-gray-900 mb-1">{stats.orderCount}</p>
             <p className="text-gray-600">Total Orders</p>
           </div>
 
           <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
-            <TrendingUp className="w-10 h-10 mb-3 text-purple-500" />
+            <TrendingUp className="w-10 h-10 mb-3 text-green-500" />
             <p className="text-3xl font-bold text-gray-900 mb-1">{stats.rating}</p>
             <p className="text-gray-600">Average Rating</p>
           </div>
@@ -113,9 +113,9 @@ export const SellerDashboard: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <button
             onClick={() => navigate('/seller/add-product')}
-            className="bg-white rounded-xl p-6 border-2 border-amber-200 hover:border-amber-400 hover:shadow-lg transition text-left"
+            className="bg-white rounded-xl p-6 border-2 border-green-200 hover:border-green-400 hover:shadow-lg transition text-left"
           >
-            <Plus className="w-8 h-8 text-amber-600 mb-3" />
+            <Plus className="w-8 h-8 text-green-600 mb-3" />
             <h3 className="font-bold text-lg text-gray-900 mb-2">Add New Product</h3>
             <p className="text-gray-600 text-sm">List a new product for sale</p>
           </button>
@@ -124,7 +124,7 @@ export const SellerDashboard: React.FC = () => {
             onClick={() => navigate('/seller/orders')}
             className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg transition text-left"
           >
-            <ShoppingBag className="w-8 h-8 text-blue-600 mb-3" />
+            <ShoppingBag className="w-8 h-8 text-green-600 mb-3" />
             <h3 className="font-bold text-lg text-gray-900 mb-2">Manage Orders</h3>
             <p className="text-gray-600 text-sm">View and process customer orders</p>
           </button>
@@ -145,7 +145,7 @@ export const SellerDashboard: React.FC = () => {
             <h2 className="text-2xl font-bold text-gray-900">Your Products</h2>
             <button
               onClick={() => navigate('/seller/products')}
-              className="text-amber-600 hover:text-amber-700 font-semibold"
+              className="text-green-600 hover:text-green-700 font-semibold"
             >
               View All
             </button>
@@ -157,7 +157,7 @@ export const SellerDashboard: React.FC = () => {
                 <div
                   key={product._id}
                   onClick={() => navigate(`/seller/products/${product._id}/edit`)}
-                  className="border border-gray-200 rounded-lg overflow-hidden hover:border-amber-300 hover:shadow-md transition cursor-pointer"
+                  className="border border-gray-200 rounded-lg overflow-hidden hover:border-green-300 hover:shadow-md transition cursor-pointer"
                 >
                   <img
                     src={product.images && product.images.length > 0 ? product.images[0] : 'https://placehold.co/100'}
@@ -167,7 +167,7 @@ export const SellerDashboard: React.FC = () => {
                   <div className="p-4">
                     <h3 className="font-bold text-gray-900 mb-2">{product.name}</h3>
                     <div className="flex justify-between items-center">
-                      <span className="text-amber-600 font-bold">
+                      <span className="text-green-600 font-bold">
                         LKR {product.retailPrice}
                       </span>
                       <span className="text-sm text-gray-600">
@@ -193,7 +193,7 @@ export const SellerDashboard: React.FC = () => {
               {stats.recentOrders.map((order) => (
                 <div
                   key={order._id}
-                  className="border border-gray-200 rounded-lg p-4 hover:border-amber-300 hover:shadow-md transition"
+                  className="border border-gray-200 rounded-lg p-4 hover:border-green-300 hover:shadow-md transition"
                 >
                   <div className="flex justify-between items-start">
                     <div>
@@ -204,14 +204,14 @@ export const SellerDashboard: React.FC = () => {
                       </p>
                     </div>
                     <div className="text-right">
-                      <p className="text-xl font-bold text-amber-600">
+                      <p className="text-xl font-bold text-green-600">
                         LKR {order.totalAmount}
                       </p>
                       <span
                         className={`inline-block px-3 py-1 rounded-full text-sm font-semibold mt-2 ${order.status === 'delivered'
                             ? 'bg-green-100 text-green-700'
                             : order.status === 'processing'
-                              ? 'bg-blue-100 text-blue-700'
+                              ? 'bg-green-100 text-green-700'
                               : 'bg-gray-100 text-gray-700'
                           }`}
                       >

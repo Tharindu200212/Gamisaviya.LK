@@ -34,11 +34,11 @@ export const OrderConfirmationPage: React.FC = () => {
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
           <div className="mb-6">
             <p className="text-gray-600 mb-2">Your Order Number</p>
-            <p className="text-3xl font-bold text-amber-600">#{orderId}</p>
+            <p className="text-3xl font-bold text-green-600">#{orderId}</p>
           </div>
 
-          <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-6">
-            <Package className="w-12 h-12 text-amber-600 mx-auto mb-3" />
+          <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+            <Package className="w-12 h-12 text-green-600 mx-auto mb-3" />
             <p className="text-gray-700 mb-2">
               We've received your order and will start processing it soon.
             </p>
@@ -67,7 +67,7 @@ export const OrderConfirmationPage: React.FC = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={() => navigate('/buyer/orders')}
-            className="inline-flex items-center justify-center px-8 py-4 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition font-semibold"
+            className="inline-flex items-center justify-center px-8 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-semibold"
           >
             View Order Details
             <ArrowRight className="w-5 h-5 ml-2" />

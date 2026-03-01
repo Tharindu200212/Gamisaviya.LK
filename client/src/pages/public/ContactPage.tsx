@@ -28,7 +28,7 @@ export function ContactPage() {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
                   />
@@ -38,7 +38,7 @@ export function ContactPage() {
                   <input
                     type="email"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
                   />
@@ -49,7 +49,7 @@ export function ContactPage() {
                 <input
                   type="text"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                   value={formData.subject}
                   onChange={(e) => setFormData({...formData, subject: e.target.value})}
                 />
@@ -59,14 +59,14 @@ export function ContactPage() {
                 <textarea
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                   value={formData.message}
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
                 />
               </div>
               <button
                 type="submit"
-                className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-lg hover:from-amber-700 hover:to-orange-700 transition-all shadow-lg font-semibold"
+                className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-green-600 to-amber-600 text-white rounded-lg hover:from-green-700 hover:to-amber-700 transition-all shadow-lg font-semibold"
               >
                 <Send className="w-5 h-5" />
                 <span>Send Message</span>
@@ -77,19 +77,19 @@ export function ContactPage() {
           {/* Contact Info */}
           <div className="space-y-6">
             <div className="bg-white rounded-xl shadow-lg p-6">
-              <Mail className="w-8 h-8 text-amber-600 mb-4" />
+              <Mail className="w-8 h-8 text-green-600 mb-4" />
               <h3 className="font-bold text-lg mb-2">Email</h3>
               <p className="text-gray-600">info@gamisaviya.lk</p>
               <p className="text-gray-600">support@gamisaviya.lk</p>
             </div>
             <div className="bg-white rounded-xl shadow-lg p-6">
-              <Phone className="w-8 h-8 text-amber-600 mb-4" />
+              <Phone className="w-8 h-8 text-green-600 mb-4" />
               <h3 className="font-bold text-lg mb-2">Phone</h3>
               <p className="text-gray-600">+94 11 234 5678</p>
               <p className="text-gray-600">+94 77 123 4567</p>
             </div>
             <div className="bg-white rounded-xl shadow-lg p-6">
-              <MapPin className="w-8 h-8 text-amber-600 mb-4" />
+              <MapPin className="w-8 h-8 text-green-600 mb-4" />
               <h3 className="font-bold text-lg mb-2">Address</h3>
               <p className="text-gray-600">123, Main Street<br/>Colombo 07<br/>Sri Lanka</p>
             </div>

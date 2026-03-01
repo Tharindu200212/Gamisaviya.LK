@@ -71,7 +71,7 @@ export const BecomeSellerPage: React.FC = () => {
             </p>
             <button
               onClick={() => navigate('/')}
-              className="px-8 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition"
+              className="px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
             >
               Back to Home
             </button>
@@ -84,11 +84,11 @@ export const BecomeSellerPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero */}
-      <div className="bg-gradient-to-r from-amber-600 to-orange-500 text-white py-20">
+      <div className="bg-gradient-to-r from-green-600 to-amber-500 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Store className="w-16 h-16 mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Become a Seller</h1>
-          <p className="text-xl text-amber-50">
+          <p className="text-xl text-green-50">
             Join hundreds of rural sellers and grow your business online
           </p>
         </div>
@@ -98,7 +98,7 @@ export const BecomeSellerPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white rounded-xl p-8 shadow-md text-center">
-            <TrendingUp className="w-12 h-12 text-amber-600 mx-auto mb-4" />
+            <TrendingUp className="w-12 h-12 text-green-600 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 mb-3">Reach More Customers</h3>
             <p className="text-gray-600">
               Access buyers from all districts of Sri Lanka through our platform
@@ -112,7 +112,7 @@ export const BecomeSellerPage: React.FC = () => {
             </p>
           </div>
           <div className="bg-white rounded-xl p-8 shadow-md text-center">
-            <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+            <Users className="w-12 h-12 text-green-600 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-gray-900 mb-3">Support & Training</h3>
             <p className="text-gray-600">
               Get help from our team to succeed in online selling
@@ -133,7 +133,7 @@ export const BecomeSellerPage: React.FC = () => {
                 required
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
               />
             </div>
 
@@ -146,7 +146,7 @@ export const BecomeSellerPage: React.FC = () => {
                 required
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
               />
             </div>
 
@@ -159,7 +159,7 @@ export const BecomeSellerPage: React.FC = () => {
                 required
                 value={formData.password}
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
               />
             </div>
 
@@ -173,7 +173,7 @@ export const BecomeSellerPage: React.FC = () => {
                   required
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                 />
               </div>
               <div>
@@ -185,7 +185,7 @@ export const BecomeSellerPage: React.FC = () => {
                   required
                   value={formData.location}
                   onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                 />
               </div>
             </div>
@@ -198,7 +198,7 @@ export const BecomeSellerPage: React.FC = () => {
                 required
                 value={formData.story}
                 onChange={(e) => setFormData({ ...formData, story: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                 rows={4}
                 placeholder="Tell us about your products and business..."
               />
@@ -208,7 +208,7 @@ export const BecomeSellerPage: React.FC = () => {
 
             <button
               type="submit"
-              className="w-full px-6 py-4 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition font-semibold text-lg"
+              className="w-full px-6 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-semibold text-lg"
               disabled={loading}
             >
               {loading ? 'Submitting...' : 'Submit Application'}

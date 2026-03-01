@@ -5,10 +5,10 @@ export const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-amber-600 to-orange-500 text-white py-20">
+      <div className="bg-gradient-to-r from-green-600 to-amber-500 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About GamiSaviya.lk</h1>
-          <p className="text-xl text-amber-50">
+          <p className="text-xl text-green-50">
             Empowering rural Sri Lankan sellers to reach customers nationwide
           </p>
         </div>
@@ -38,8 +38,8 @@ export const AboutPage: React.FC = () => {
         {/* Values */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
-            <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Heart className="w-8 h-8 text-amber-600" />
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Heart className="w-8 h-8 text-green-600" />
             </div>
             <h3 className="font-bold text-lg mb-2">Authenticity</h3>
             <p className="text-gray-600">100% genuine products from verified sellers</p>
@@ -52,15 +52,15 @@ export const AboutPage: React.FC = () => {
             <p className="text-gray-600">Supporting rural livelihoods</p>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Target className="w-8 h-8 text-blue-600" />
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Target className="w-8 h-8 text-green-600" />
             </div>
             <h3 className="font-bold text-lg mb-2">Quality</h3>
             <p className="text-gray-600">Carefully curated products</p>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Award className="w-8 h-8 text-purple-600" />
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Award className="w-8 h-8 text-green-600" />
             </div>
             <h3 className="font-bold text-lg mb-2">Trust</h3>
             <p className="text-gray-600">Secure and reliable platform</p>

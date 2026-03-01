@@ -41,12 +41,12 @@ export function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-amber-50 to-green-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full">
         <div className="bg-white rounded-2xl shadow-2xl p-8">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-amber-600 to-orange-700 rounded-full mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-600 to-amber-700 rounded-full mb-4">
               <LogIn className="w-8 h-8 text-white" />
             </div>
             <h2 className="text-3xl font-bold text-gray-900">Welcome Back</h2>
@@ -61,10 +61,10 @@ export function LoginPage() {
           )}
 
           {/* Demo Credentials */}
-          <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-            <p className="text-xs font-semibold text-blue-900 mb-2">Demo Credentials:</p>
-            <p className="text-xs text-blue-800">Email: any@email.com</p>
-            <p className="text-xs text-blue-800">Password: any password</p>
+          <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+            <p className="text-xs font-semibold text-green-900 mb-2">Demo Credentials:</p>
+            <p className="text-xs text-green-800">Email: any@email.com</p>
+            <p className="text-xs text-green-800">Password: any password</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -79,7 +79,7 @@ export function LoginPage() {
                   onClick={() => setRole('buyer')}
                   className={`py-3 px-4 rounded-lg font-medium transition-all ${
                     role === 'buyer'
-                      ? 'bg-amber-600 text-white shadow-lg'
+                      ? 'bg-green-600 text-white shadow-lg'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -90,7 +90,7 @@ export function LoginPage() {
                   onClick={() => setRole('seller')}
                   className={`py-3 px-4 rounded-lg font-medium transition-all ${
                     role === 'seller'
-                      ? 'bg-amber-600 text-white shadow-lg'
+                      ? 'bg-green-600 text-white shadow-lg'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -101,7 +101,7 @@ export function LoginPage() {
                   onClick={() => setRole('admin')}
                   className={`py-3 px-4 rounded-lg font-medium transition-all ${
                     role === 'admin'
-                      ? 'bg-amber-600 text-white shadow-lg'
+                      ? 'bg-green-600 text-white shadow-lg'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -121,7 +121,7 @@ export function LoginPage() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                   placeholder="you@example.com"
                 />
               </div>
@@ -138,7 +138,7 @@ export function LoginPage() {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                  className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                   placeholder="••••••••"
                 />
               </div>
@@ -147,10 +147,10 @@ export function LoginPage() {
             {/* Remember Me & Forgot Password */}
             <div className="flex items-center justify-between">
               <label className="flex items-center">
-                <input type="checkbox" className="rounded border-gray-300 text-amber-600 focus:ring-amber-500" />
+                <input type="checkbox" className="rounded border-gray-300 text-green-600 focus:ring-green-500" />
                 <span className="ml-2 text-sm text-gray-600">Remember me</span>
               </label>
-              <a href="#" className="text-sm text-amber-700 hover:text-amber-800">
+              <a href="#" className="text-sm text-green-700 hover:text-green-800">
                 Forgot password?
               </a>
             </div>
@@ -158,7 +158,7 @@ export function LoginPage() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-lg hover:from-amber-700 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl font-semibold"
+              className="w-full py-4 bg-gradient-to-r from-green-600 to-amber-600 text-white rounded-lg hover:from-green-700 hover:to-amber-700 transition-all shadow-lg hover:shadow-xl font-semibold"
             >
               Sign In
             </button>
@@ -168,7 +168,7 @@ export function LoginPage() {
           <div className="mt-6 text-center">
             <p className="text-gray-600">
               Don't have an account?{' '}
-              <Link to="/register" className="text-amber-700 hover:text-amber-800 font-medium">
+              <Link to="/register" className="text-green-700 hover:text-green-800 font-medium">
                 Sign up
               </Link>
             </p>

@@ -45,7 +45,7 @@ export function HomePage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
-        <Loader2 className="w-10 h-10 animate-spin text-amber-600" />
+        <Loader2 className="w-10 h-10 animate-spin text-green-600" />
       </div>
     );
   }
@@ -53,7 +53,7 @@ export function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Responsive Full Width Hero Banner Section */}
-      <section className="relative w-full bg-gray-900 border-b border-gray-800">
+      <section className="relative w-full bg-green-950 border-b border-green-900">
         <div className="relative w-full">
           {/* Background Image */}
           <img
@@ -69,28 +69,28 @@ export function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-100 text-amber-700 rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-700 rounded-full mb-4">
                 <Shield className="w-8 h-8" />
               </div>
               <h3 className="font-semibold mb-2">Quality Assured</h3>
               <p className="text-sm text-gray-600">All products verified by our team</p>
             </div>
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-100 text-amber-700 rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-700 rounded-full mb-4">
                 <Truck className="w-8 h-8" />
               </div>
               <h3 className="font-semibold mb-2">Island-wide Delivery</h3>
               <p className="text-sm text-gray-600">Fast shipping across Sri Lanka</p>
             </div>
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-100 text-amber-700 rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-700 rounded-full mb-4">
                 <Users className="w-8 h-8" />
               </div>
               <h3 className="font-semibold mb-2">Support Local</h3>
               <p className="text-sm text-gray-600">Directly from village artisans</p>
             </div>
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-100 text-amber-700 rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-700 rounded-full mb-4">
                 <ShoppingBag className="w-8 h-8" />
               </div>
               <h3 className="font-semibold mb-2">Wholesale Pricing</h3>
@@ -103,11 +103,11 @@ export function HomePage() {
       {/* Promotional Ad Banner */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-r from-amber-600 to-orange-500">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-r from-green-600 to-amber-500">
             {/* Background Decorative Pattern/Overlay */}
             <div className="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
             <div className="absolute -right-20 -top-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-            <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-amber-300/20 rounded-full blur-3xl"></div>
+            <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-green-300/20 rounded-full blur-3xl"></div>
 
             <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="text-center md:text-left">
@@ -118,14 +118,14 @@ export function HomePage() {
                 <h3 className="text-3xl md:text-5xl font-extrabold text-white mb-3 tracking-tight">
                   Save 20% on Wholesale
                 </h3>
-                <p className="text-amber-50 text-lg md:text-xl max-w-2xl font-medium">
+                <p className="text-green-50 text-lg md:text-xl max-w-2xl font-medium">
                   Stock up on premium Sri Lankan spices, organic oils, and pure honey. Direct from the village to your business.
                 </p>
               </div>
               <div className="flex-shrink-0">
                 <Link
                   to="/products"
-                  className="group inline-flex items-center justify-center px-8 py-4 text-amber-700 bg-white hover:bg-gray-50 rounded-xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+                  className="group inline-flex items-center justify-center px-8 py-4 text-green-700 bg-white hover:bg-gray-50 rounded-xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]"
                 >
                   Claim Offer Now
                   <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" />
@@ -143,7 +143,7 @@ export function HomePage() {
             <h2 className="text-3xl font-bold text-gray-900">{t('featuredProducts')}</h2>
             <Link
               to="/products"
-              className="text-amber-700 hover:text-amber-800 font-medium flex items-center"
+              className="text-green-700 hover:text-green-800 font-medium flex items-center"
             >
               View All
               <ArrowRight className="w-5 h-5 ml-1" />
@@ -177,7 +177,7 @@ export function HomePage() {
               topSellers.map(seller => (
                 <div
                   key={seller._id}
-                  className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all"
+                  className="bg-gradient-to-br from-green-50 to-amber-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all"
                 >
                   <div className="aspect-square overflow-hidden">
                     <img
@@ -193,7 +193,7 @@ export function HomePage() {
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-600">{seller.productCount || 0} Products</span>
                       <div className="flex items-center">
-                        <span className="text-amber-600 font-medium">★ {seller.rating || 0}</span>
+                        <span className="text-green-600 font-medium">★ {seller.rating || 0}</span>
                       </div>
                     </div>
                   </div>
@@ -209,15 +209,15 @@ export function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-amber-700 to-orange-800 text-white">
+      <section className="py-20 bg-gradient-to-br from-green-700 to-amber-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Start Selling?</h2>
-          <p className="text-xl text-amber-100 mb-8">
+          <p className="text-xl text-green-100 mb-8">
             Join our community of rural artisans and farmers. Share your products with the world.
           </p>
           <Link
             to="/become-seller"
-            className="inline-flex items-center px-8 py-4 bg-white text-amber-700 rounded-lg hover:bg-amber-50 transition-colors shadow-lg text-lg font-semibold"
+            className="inline-flex items-center px-8 py-4 bg-white text-green-700 rounded-lg hover:bg-green-50 transition-colors shadow-lg text-lg font-semibold"
           >
             Become a Seller Today
             <ArrowRight className="w-6 h-6 ml-2" />

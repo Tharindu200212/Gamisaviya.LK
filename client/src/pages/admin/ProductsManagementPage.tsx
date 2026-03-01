@@ -225,7 +225,7 @@ export default function ProductsManagementPage() {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">
-            <Package className="w-10 h-10 text-amber-600" />
+            <Package className="w-10 h-10 text-green-600" />
             <h1 className="text-3xl font-bold text-gray-900">Product Management</h1>
           </div>
           <p className="text-gray-600">Manage all products across the platform</p>
@@ -233,9 +233,9 @@ export default function ProductsManagementPage() {
 
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-          <Card className="p-4 bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
-            <p className="text-sm text-blue-700 mb-1">Total Products</p>
-            <p className="text-3xl font-bold text-blue-900">{products.length}</p>
+          <Card className="p-4 bg-gradient-to-br from-green-50 to-green-100 border-green-200">
+            <p className="text-sm text-green-700 mb-1">Total Products</p>
+            <p className="text-3xl font-bold text-green-900">{products.length}</p>
           </Card>
           <Card className="p-4 bg-gradient-to-br from-green-50 to-green-100 border-green-200">
             <p className="text-sm text-green-700 mb-1">Approved</p>
@@ -249,9 +249,9 @@ export default function ProductsManagementPage() {
               {products.filter((p) => !p.approved).length}
             </p>
           </Card>
-          <Card className="p-4 bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
-            <p className="text-sm text-purple-700 mb-1">Featured</p>
-            <p className="text-3xl font-bold text-purple-900">
+          <Card className="p-4 bg-gradient-to-br from-green-50 to-green-100 border-green-200">
+            <p className="text-sm text-green-700 mb-1">Featured</p>
+            <p className="text-3xl font-bold text-green-900">
               {products.filter((p) => p.featured).length}
             </p>
           </Card>
@@ -371,7 +371,7 @@ export default function ProductsManagementPage() {
                             {product.approved ? 'Approved' : 'Pending'}
                           </Badge>
                           {product.featured && (
-                            <Badge variant="outline" className="bg-purple-100 text-purple-700">
+                            <Badge variant="outline" className="bg-green-100 text-green-700">
                               Featured
                             </Badge>
                           )}
@@ -458,7 +458,7 @@ export default function ProductsManagementPage() {
                   </div>
                   <div>
                     <Label className="text-gray-600">Retail Price</Label>
-                    <p className="font-medium text-lg text-amber-600">
+                    <p className="font-medium text-lg text-green-600">
                       LKR {selectedProduct.retailPrice}
                     </p>
                   </div>
@@ -495,7 +495,7 @@ export default function ProductsManagementPage() {
                     {selectedProduct.approved ? 'Approved' : 'Pending Approval'}
                   </Badge>
                   {selectedProduct.featured && (
-                    <Badge variant="outline" className="bg-purple-100 text-purple-700">
+                    <Badge variant="outline" className="bg-green-100 text-green-700">
                       Featured Product
                     </Badge>
                   )}
@@ -628,7 +628,7 @@ export default function ProductsManagementPage() {
               <Button variant="outline" onClick={() => setIsEditDialogOpen(false)}>
                 Cancel
               </Button>
-              <Button onClick={handleEditProduct} className="bg-blue-600 hover:bg-blue-700">
+              <Button onClick={handleEditProduct} className="bg-green-600 hover:bg-green-700">
                 Save Changes
               </Button>
             </DialogFooter>

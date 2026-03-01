@@ -112,7 +112,7 @@ export const SellerApprovalPage: React.FC = () => {
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <Loader2 className="w-8 h-8 animate-spin text-amber-600" />
+        <Loader2 className="w-8 h-8 animate-spin text-green-600" />
       </div>
     );
   }
@@ -142,8 +142,8 @@ export const SellerApprovalPage: React.FC = () => {
                       key={s.id}
                       onClick={() => setSelectedSeller(s.id)}
                       className={`bg-white rounded-lg p-4 cursor-pointer border-2 transition ${selectedSeller === s.id
-                        ? 'border-amber-500 shadow-md'
-                        : 'border-gray-200 hover:border-amber-300'
+                        ? 'border-green-500 shadow-md'
+                        : 'border-gray-200 hover:border-green-300'
                         }`}
                     >
                       <div className="flex items-center mb-2">
@@ -157,7 +157,7 @@ export const SellerApprovalPage: React.FC = () => {
                           <p className="text-sm text-gray-600">{s.location || 'No location'}</p>
                         </div>
                       </div>
-                      <span className="inline-block px-3 py-1 bg-orange-100 text-orange-700 text-xs font-semibold rounded-full">
+                      <span className="inline-block px-3 py-1 bg-amber-100 text-amber-700 text-xs font-semibold rounded-full">
                         Pending
                       </span>
                     </div>
@@ -227,7 +227,7 @@ export const SellerApprovalPage: React.FC = () => {
                   <span
                     className={`px-4 py-2 rounded-full font-semibold ${seller.approved
                       ? 'bg-green-100 text-green-700'
-                      : 'bg-orange-100 text-orange-700'
+                      : 'bg-amber-100 text-amber-700'
                       }`}
                   >
                     {seller.approved ? 'Approved' : 'Pending'}
@@ -260,8 +260,8 @@ export const SellerApprovalPage: React.FC = () => {
                 {/* Statistics */}
                 {seller.approved && (
                   <div className="mb-6 grid grid-cols-3 gap-4">
-                    <div className="bg-blue-50 rounded-lg p-4 text-center">
-                      <p className="text-2xl font-bold text-blue-600">{seller.products || 0}</p>
+                    <div className="bg-green-50 rounded-lg p-4 text-center">
+                      <p className="text-2xl font-bold text-green-600">{seller.products || 0}</p>
                       <p className="text-sm text-gray-600">Products</p>
                     </div>
                     {/* 
@@ -270,8 +270,8 @@ export const SellerApprovalPage: React.FC = () => {
                       <p className="text-sm text-gray-600">Rating</p>
                     </div>
                      */}
-                    <div className="bg-amber-50 rounded-lg p-4 text-center">
-                      <p className="text-2xl font-bold text-amber-600">
+                    <div className="bg-green-50 rounded-lg p-4 text-center">
+                      <p className="text-2xl font-bold text-green-600">
                         {new Date(seller.createdAt).toLocaleDateString()}
                       </p>
                       <p className="text-sm text-gray-600">Joined</p>

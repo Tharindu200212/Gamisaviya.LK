@@ -6,9 +6,9 @@ export function BuyerOrdersPage() {
   const getStatusColor = (status: string) => {
     const colors: Record<string, string> = {
       delivered: 'bg-green-100 text-green-800',
-      processing: 'bg-blue-100 text-blue-800',
+      processing: 'bg-green-100 text-green-800',
       pending: 'bg-yellow-100 text-yellow-800',
-      shipped: 'bg-purple-100 text-purple-800',
+      shipped: 'bg-green-100 text-green-800',
       cancelled: 'bg-red-100 text-red-800',
     };
     return colors[status] || 'bg-gray-100 text-gray-800';
@@ -38,7 +38,7 @@ export function BuyerOrdersPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-sm text-gray-600 mb-1">Order Total</div>
-                  <div className="text-2xl font-bold text-amber-700">
+                  <div className="text-2xl font-bold text-green-700">
                     LKR {order.total.toLocaleString()}
                   </div>
                 </div>
@@ -79,8 +79,8 @@ export function BuyerOrdersPage() {
               </div>
 
               {/* Shipping Address */}
-              <div className="flex items-start space-x-2 text-sm text-gray-600 bg-blue-50 border border-blue-200 rounded-lg p-4">
-                <MapPin className="w-5 h-5 text-blue-600 mt-0.5" />
+              <div className="flex items-start space-x-2 text-sm text-gray-600 bg-green-50 border border-green-200 rounded-lg p-4">
+                <MapPin className="w-5 h-5 text-green-600 mt-0.5" />
                 <div>
                   <div className="font-semibold text-gray-900 mb-1">Shipping Address</div>
                   <div>{order.shippingAddress}</div>
@@ -92,7 +92,7 @@ export function BuyerOrdersPage() {
                 <button className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
                   Track Order
                 </button>
-                <button className="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors">
+                <button className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
                   View Details
                 </button>
               </div>

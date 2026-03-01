@@ -102,7 +102,7 @@ export function ApprovalsPage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <Loader2 className="w-8 h-8 animate-spin text-amber-600" />
+        <Loader2 className="w-8 h-8 animate-spin text-green-600" />
       </div>
     );
   }
@@ -121,12 +121,12 @@ export function ApprovalsPage() {
             <button
               onClick={() => setFilter('pending')}
               className={`px-4 py-2 rounded-md transition-colors flex items-center gap-2 ${filter === 'pending'
-                ? 'bg-amber-100 text-amber-800 font-medium'
+                ? 'bg-green-100 text-green-800 font-medium'
                 : 'text-gray-600 hover:bg-gray-50'
                 }`}
             >
               Pending
-              <span className={`text-xs px-2 py-0.5 rounded-full ${filter === 'pending' ? 'bg-amber-200 text-amber-900' : 'bg-gray-200 text-gray-600'
+              <span className={`text-xs px-2 py-0.5 rounded-full ${filter === 'pending' ? 'bg-green-200 text-green-900' : 'bg-gray-200 text-gray-600'
                 }`}>
                 {pendingCount}
               </span>
@@ -134,12 +134,12 @@ export function ApprovalsPage() {
             <button
               onClick={() => setFilter('all')}
               className={`px-4 py-2 rounded-md transition-colors flex items-center gap-2 ${filter === 'all'
-                ? 'bg-amber-100 text-amber-800 font-medium'
+                ? 'bg-green-100 text-green-800 font-medium'
                 : 'text-gray-600 hover:bg-gray-50'
                 }`}
             >
               All Products
-              <span className={`text-xs px-2 py-0.5 rounded-full ${filter === 'all' ? 'bg-amber-200 text-amber-900' : 'bg-gray-200 text-gray-600'
+              <span className={`text-xs px-2 py-0.5 rounded-full ${filter === 'all' ? 'bg-green-200 text-green-900' : 'bg-gray-200 text-gray-600'
                 }`}>
                 {products.length}
               </span>
@@ -162,7 +162,7 @@ export function ApprovalsPage() {
         ) : (
           <div className="space-y-6">
             {filteredProducts.map(product => (
-              <div key={product.id} className="bg-white rounded-xl shadow-md p-6 border-l-4 border-transparent hover:border-amber-400 transition-all">
+              <div key={product.id} className="bg-white rounded-xl shadow-md p-6 border-l-4 border-transparent hover:border-green-400 transition-all">
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="relative">
                     <img
@@ -171,7 +171,7 @@ export function ApprovalsPage() {
                       className="w-full md:w-48 h-48 object-cover rounded-lg"
                     />
                     {product.featured && (
-                      <div className="absolute top-2 right-2 bg-amber-500 text-white text-xs px-2 py-1 rounded shadow">Featured</div>
+                      <div className="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded shadow">Featured</div>
                     )}
                   </div>
 
@@ -237,7 +237,7 @@ export function ApprovalsPage() {
                       <button
                         onClick={() => handleToggleFeature(product.id, !!product.featured)}
                         className={`flex items-center px-4 py-2 border rounded-lg transition-colors text-sm font-medium ${product.featured
-                          ? 'border-amber-200 text-amber-700 bg-amber-50 hover:bg-amber-100'
+                          ? 'border-green-200 text-green-700 bg-green-50 hover:bg-green-100'
                           : 'border-gray-200 text-gray-600 hover:bg-gray-50'
                           }`}
                       >

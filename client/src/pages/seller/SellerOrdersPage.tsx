@@ -70,8 +70,8 @@ export const SellerOrdersPage: React.FC = () => {
     const getStatusColor = (status: string) => {
         switch (status) {
             case 'pending': return 'bg-yellow-100 text-yellow-800';
-            case 'processing': return 'bg-blue-100 text-blue-800';
-            case 'shipped': return 'bg-purple-100 text-purple-800';
+            case 'processing': return 'bg-green-100 text-green-800';
+            case 'shipped': return 'bg-green-100 text-green-800';
             case 'delivered': return 'bg-green-100 text-green-800';
             case 'cancelled': return 'bg-red-100 text-red-800';
             default: return 'bg-gray-100 text-gray-800';
@@ -81,7 +81,7 @@ export const SellerOrdersPage: React.FC = () => {
     if (loading) {
         return (
             <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-                <Loader2 className="w-8 h-8 animate-spin text-amber-600" />
+                <Loader2 className="w-8 h-8 animate-spin text-green-600" />
             </div>
         );
     }
@@ -129,7 +129,7 @@ export const SellerOrdersPage: React.FC = () => {
                                             <select
                                                 value={order.status}
                                                 onChange={(e) => handleStatusUpdate(order._id, e.target.value)}
-                                                className="border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500 text-sm"
+                                                className="border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 text-sm"
                                                 disabled={order.status === 'cancelled' || order.status === 'delivered'}
                                             >
                                                 <option value="pending">Pending</option>
@@ -172,7 +172,7 @@ export const SellerOrdersPage: React.FC = () => {
                                                                 <p className="font-medium text-gray-900 text-sm">{item.productId.name}</p>
                                                                 <p className="text-xs text-gray-500">Qty: {item.quantity}</p>
                                                             </div>
-                                                            <div className="font-semibold text-sm text-amber-600">
+                                                            <div className="font-semibold text-sm text-green-600">
                                                                 {/* Note: This price might need to be passed from backend better if it's per unit */}
                                                                 {/* For now assuming the controller filters correctly and these are valid */}
                                                             </div>

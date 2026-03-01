@@ -66,7 +66,7 @@ export function SellerProductsPage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <Loader2 className="w-8 h-8 animate-spin text-amber-600" />
+        <Loader2 className="w-8 h-8 animate-spin text-green-600" />
       </div>
     )
   }
@@ -81,7 +81,7 @@ export function SellerProductsPage() {
           </div>
           <Link
             to="/seller/add-product"
-            className="flex items-center space-x-2 px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors shadow-lg"
+            className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors shadow-lg"
           >
             <Plus className="w-5 h-5" />
             <span>Add Product</span>
@@ -158,7 +158,7 @@ export function SellerProductsPage() {
                           <div className="flex items-center space-x-2">
                             <Link
                               to={`/seller/products/${product.id}/edit`}
-                              className="p-2 text-amber-600 hover:bg-amber-50 rounded-lg transition-colors"
+                              className="p-2 text-green-600 hover:bg-green-50 rounded-lg transition-colors"
                             >
                               <Edit className="w-5 h-5" />
                             </Link>

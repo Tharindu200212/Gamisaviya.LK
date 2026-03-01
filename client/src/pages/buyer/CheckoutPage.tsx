@@ -57,7 +57,7 @@ export function CheckoutPage() {
             {/* Shipping Information */}
             <div className="bg-white rounded-xl shadow-md p-6">
               <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                <MapPin className="w-6 h-6 mr-2 text-amber-600" />
+                <MapPin className="w-6 h-6 mr-2 text-green-600" />
                 Shipping Information
               </h2>
 
@@ -72,7 +72,7 @@ export function CheckoutPage() {
                     value={formData.fullName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                     placeholder="John Doe"
                   />
                 </div>
@@ -87,7 +87,7 @@ export function CheckoutPage() {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                     placeholder="+94 77 123 4567"
                   />
                 </div>
@@ -102,7 +102,7 @@ export function CheckoutPage() {
                     value={formData.city}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                     placeholder="Colombo"
                   />
                 </div>
@@ -117,7 +117,7 @@ export function CheckoutPage() {
                     onChange={handleChange}
                     required
                     rows={3}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                     placeholder="123, Main Street"
                   />
                 </div>
@@ -131,7 +131,7 @@ export function CheckoutPage() {
                     name="postalCode"
                     value={formData.postalCode}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                     placeholder="00700"
                   />
                 </div>
@@ -141,7 +141,7 @@ export function CheckoutPage() {
             {/* Payment Method */}
             <div className="bg-white rounded-xl shadow-md p-6">
               <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                <CreditCard className="w-6 h-6 mr-2 text-amber-600" />
+                <CreditCard className="w-6 h-6 mr-2 text-green-600" />
                 Payment Method
               </h2>
 
@@ -198,7 +198,7 @@ export function CheckoutPage() {
           <div className="lg:col-span-1">
             <div className="bg-white rounded-xl shadow-lg p-6 sticky top-20">
               <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                <ShoppingBag className="w-6 h-6 mr-2 text-amber-600" />
+                <ShoppingBag className="w-6 h-6 mr-2 text-green-600" />
                 Order Summary
               </h2>
 
@@ -245,7 +245,7 @@ export function CheckoutPage() {
                 </div>
                 <div className="border-t border-gray-200 pt-3 flex justify-between">
                   <span className="font-bold text-gray-900">Total</span>
-                  <span className="text-2xl font-bold text-amber-700">
+                  <span className="text-2xl font-bold text-green-700">
                     LKR {total.toLocaleString()}
                   </span>
                 </div>
@@ -254,7 +254,7 @@ export function CheckoutPage() {
               {/* Place Order Button */}
               <button
                 type="submit"
-                className="w-full py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-lg hover:from-amber-700 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl font-semibold"
+                className="w-full py-4 bg-gradient-to-r from-green-600 to-amber-600 text-white rounded-lg hover:from-green-700 hover:to-amber-700 transition-all shadow-lg hover:shadow-xl font-semibold"
               >
                 Place Order
               </button>
