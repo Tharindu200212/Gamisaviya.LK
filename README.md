@@ -126,4 +126,4 @@ CLIENT_URL=http://localhost:5173
 
 ---
 
-**Made with ❤️ for Sri Lankan rural sellers** 🌟
+
