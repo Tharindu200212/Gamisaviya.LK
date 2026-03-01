@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
   Navigate,
-  //tharindu
+
 } from "react-router-dom";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import { CartProvider } from "./contexts/CartContext";
