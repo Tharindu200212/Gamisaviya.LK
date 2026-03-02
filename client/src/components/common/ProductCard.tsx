@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Star, MapPin, Tag } from 'lucide-react';
-import { Product } from '../../utils/mockData';
+import { Product } from '../../types';
 import { getImage } from '../../utils/imageMap';
 import { useLanguage } from '../../contexts/LanguageContext';
 
@@ -11,9 +11,9 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   const { language, t } = useLanguage();
-  
-  const name = language === 'si' ? product.nameSi : product.name;
-  const sellerName = language === 'si' ? product.sellerNameSi : product.sellerName;
+
+  const name = language === 'si' && product.namesin ? product.namesin : product.name;
+  const sellerName = product.sellerName;
 
   return (
     <Link
@@ -32,25 +32,25 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         )}
       </div>
-      
+
       <div className="p-4">
         <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-green-700 transition-colors">
           {name}
         </h3>
-        
+
         <div className="flex items-center space-x-1 text-sm text-gray-600 mb-3">
           <MapPin className="w-4 h-4" />
           <span>{product.sellerLocation}</span>
           <span className="mx-1">•</span>
           <span className="text-gray-500">{sellerName}</span>
         </div>
-        
+
         <div className="flex items-center space-x-1 mb-3">
           <Star className="w-4 h-4 fill-green-400 text-green-400" />
           <span className="text-sm font-medium text-gray-900">{product.rating}</span>
           <span className="text-sm text-gray-500">({product.reviews})</span>
         </div>
-        
+
         <div className="border-t border-gray-200 pt-3 mt-3">
           <div className="flex items-baseline justify-between">
             <div>

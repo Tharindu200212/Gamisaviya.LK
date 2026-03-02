@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Search, SlidersHorizontal, Loader2, AlertCircle } from 'lucide-react';
-import { categories } from '../../utils/mockData';
+const categories = [
+  'All',
+  'Grains & Rice',
+  'Oils & Spices',
+  'Honey & Sweeteners',
+  'Textiles & Crafts',
+  'Pottery & Ceramics',
+  'Fresh Vegetables',
+];
 import { ProductCard } from '../../components/common/ProductCard';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { productAPI } from '../../utils/api';
@@ -115,8 +123,8 @@ export function ProductsPage() {
                         key={category}
                         onClick={() => setSelectedCategory(category)}
                         className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${selectedCategory === category
-                            ? 'bg-green-600 text-white'
-                            : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
+                          ? 'bg-green-600 text-white'
+                          : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
                           }`}
                       >
                         {category}

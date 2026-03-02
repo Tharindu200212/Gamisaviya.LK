@@ -3,14 +3,33 @@ import { useNavigate } from 'react-router-dom';
 import { ShoppingBag, Package, Heart, User, MapPin, TrendingUp } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useCart } from '../../contexts/CartContext';
-import { mockOrders } from '../../data/mockData';
+import { orderAPI } from '../../utils/api';
+import { Order } from '../../types';
 
 export const BuyerDashboard: React.FC = () => {
   const { user } = useAuth();
   const { cartCount, cartTotal } = useCart();
   const navigate = useNavigate();
 
-  const recentOrders = mockOrders.slice(0, 3);
+  const [orders, setOrders] = React.useState<Order[]>([]);
+
+  React.useEffect(() => {
+    const fetchOrders = async () => {
+      try {
+        const res = await orderAPI.getBuyerOrders();
+        if (res.success) {
+          setOrders(res.orders || []);
+        }
+      } catch (err) {
+        console.error('Failed to fetch orders:', err);
+      }
+    };
+    if (user?.role === 'buyer') {
+      fetchOrders();
+    }
+  }, [user]);
+
+  const recentOrders = orders.slice(0, 3);
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
@@ -42,7 +61,7 @@ export const BuyerDashboard: React.FC = () => {
             className="bg-white rounded-xl p-6 border-2 border-gray-200 cursor-pointer hover:shadow-lg transition"
           >
             <Package className="w-10 h-10 mb-3 text-green-500" />
-            <p className="text-3xl font-bold text-gray-900 mb-1">{mockOrders.length}</p>
+            <p className="text-3xl font-bold text-gray-900 mb-1">{orders.length}</p>
             <p className="text-gray-600">Total Orders</p>
           </div>
 
@@ -120,15 +139,14 @@ export const BuyerDashboard: React.FC = () => {
                       </p>
                     </div>
                     <span
-                      className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                        order.status === 'delivered'
+                      className={`px-3 py-1 rounded-full text-sm font-semibold ${order.status === 'delivered'
                           ? 'bg-green-100 text-green-700'
                           : order.status === 'processing'
-                          ? 'bg-green-100 text-green-700'
-                          : order.status === 'shipped'
-                          ? 'bg-green-100 text-green-700'
-                          : 'bg-gray-100 text-gray-700'
-                      }`}
+                            ? 'bg-green-100 text-green-700'
+                            : order.status === 'shipped'
+                              ? 'bg-green-100 text-green-700'
+                              : 'bg-gray-100 text-gray-700'
+                        }`}
                     >
                       {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
                     </span>

@@ -1,14 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, TrendingUp } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useProducts } from '../hooks/useProducts';
-import { mockSellers } from '../data/mockData';
+import { sellerAPI } from '../utils/api';
+import { Seller } from '../types';
 
 export const HomePage: React.FC = () => {
   const { language, t } = useLanguage();
   const { products } = useProducts({ featured: true });
   const featuredProducts = products.slice(0, 3);
+
+  const [sellers, setSellers] = useState<Seller[]>([]);
+
+  useEffect(() => {
+    const fetchSellers = async () => {
+      try {
+        const res = await sellerAPI.getAll();
+        if (res.success) {
+          setSellers(res.sellers);
+        }
+      } catch (err) {
+        console.error('Failed to fetch sellers:', err);
+      }
+    };
+    fetchSellers();
+  }, []);
 
   const categories = [
     { name: 'Grains & Rice', namesin: 'ධාන්‍ය සහ සහල්', image: '/categories/basket_grains.png', count: 45 },
@@ -199,17 +216,21 @@ export const HomePage: React.FC = () => {
             {t('meetTheMaker')}
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {mockSellers.slice(0, 3).map((seller) => (
+            {sellers.slice(0, 3).map((seller) => (
               <div
                 key={seller.id}
                 className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition"
               >
-                <div className="aspect-square overflow-hidden">
-                  <img
-                    src={seller.image}
-                    alt={seller.name}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="aspect-square overflow-hidden bg-gray-100 flex items-center justify-center">
+                  {seller.image ? (
+                    <img
+                      src={seller.image}
+                      alt={seller.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="text-gray-400 font-bold text-4xl">{seller.name[0]}</div>
+                  )}
                 </div>
                 <div className="p-6">
                   <h3 className="font-bold text-xl text-gray-900 mb-2">{seller.name}</h3>
@@ -220,9 +241,9 @@ export const HomePage: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <div className="text-yellow-500 flex items-center">
                       <span className="text-lg">⭐</span>
-                      <span className="ml-1 font-semibold">{seller.rating}</span>
+                      <span className="ml-1 font-semibold">{seller.rating || 5.0}</span>
                     </div>
-                    <span className="text-sm text-gray-500">{seller.products} products</span>
+                    <span className="text-sm text-gray-500">{seller.products || 0} products</span>
                   </div>
                 </div>
               </div>

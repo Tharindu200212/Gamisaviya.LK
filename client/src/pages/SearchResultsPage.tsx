@@ -17,9 +17,10 @@ export const SearchResultsPage: React.FC = () => {
             try {
                 // We'll fetch all products and filter locally for prototype simplicity
                 // In a real app, this should be a backend search endpoint
-                const products = await productAPI.getAll();
+                const response = await productAPI.getAll();
+                const productsList = response.success ? response.products : [];
 
-                const filtered = products.filter((product: any) => {
+                const filtered = productsList.filter((product: any) => {
                     const searchTerm = query.toLowerCase();
                     return (
                         (product.name && product.name.toLowerCase().includes(searchTerm)) ||
@@ -61,13 +62,12 @@ export const SearchResultsPage: React.FC = () => {
                 ) : results.length > 0 ? (
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {results.map((product) => {
-                            // Get the correct image source (handling full URLs or paths)
-                            const imageSrc = product.image_url
-                                ? (product.image_url.startsWith('http') ? product.image_url : `/products/${product.image_url.split('/').pop()}`)
+                            const imageSrc = product.images && product.images.length > 0
+                                ? (product.images[0].startsWith('http') ? product.images[0] : `/products/${product.images[0].split('/').pop()}`)
                                 : '/placeholder.png';
 
                             return (
-                                <Link to={`/products/${product.id}`} key={product.id} className="bg-white border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+                                <Link to={`/product/${product._id || product.id}`} key={product._id || product.id} className="bg-white border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col">
                                     <div className="relative h-48 overflow-hidden bg-gray-100">
                                         <img
                                             src={imageSrc}
@@ -83,7 +83,7 @@ export const SearchResultsPage: React.FC = () => {
                                         <h3 className="text-lg font-bold text-gray-900 mb-1 line-clamp-1">{product.name}</h3>
                                         {product.namesin && <p className="text-sm text-gray-500 mb-2 font-sinhala">{product.namesin}</p>}
                                         <div className="mt-auto pt-4 flex items-center justify-between">
-                                            <span className="text-lg font-bold text-green-700">Rs. {product.price.toLocaleString()}</span>
+                                            <span className="text-lg font-bold text-green-700">Rs. {product.retailPrice ? product.retailPrice.toLocaleString() : 0}</span>
                                             <button className="hidden sm:flex bg-green-100 p-2 text-green-800 rounded-lg hover:bg-green-200 transition-colors">
                                                 <ShoppingBag className="w-4 h-4" />
                                             </button>

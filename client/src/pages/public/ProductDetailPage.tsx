@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Star, MapPin, Package, Minus, Plus, ShoppingCart, User } from 'lucide-react';
-import { mockProducts } from '../../utils/mockData';
+import { useProduct } from '../../hooks/useProducts';
 import { getImage } from '../../utils/imageMap';
 import { useCart } from '../../contexts/CartContext';
 import { useAuth } from '../../contexts/AuthContext';
@@ -17,7 +17,11 @@ export function ProductDetailPage() {
   const [quantity, setQuantity] = useState(1);
   const [showSuccess, setShowSuccess] = useState(false);
 
-  const product = mockProducts.find(p => p.id === id);
+  const { product, loading } = useProduct(id || '');
+
+  if (loading) {
+    return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+  }
 
   if (!product) {
     return (
@@ -32,9 +36,9 @@ export function ProductDetailPage() {
     );
   }
 
-  const name = language === 'si' ? product.nameSi : product.name;
-  const description = language === 'si' ? product.descriptionSi : product.description;
-  const sellerName = language === 'si' ? product.sellerNameSi : product.sellerName;
+  const name = language === 'si' && product.namesin ? product.namesin : product.name;
+  const description = language === 'si' && product.descriptionsin ? product.descriptionsin : product.description;
+  const sellerName = product.sellerName;
 
   const handleAddToCart = () => {
     if (!user || user.role !== 'buyer') {
@@ -132,11 +136,10 @@ export function ProductDetailPage() {
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className={`w-5 h-5 ${
-                      i < Math.floor(product.rating)
+                    className={`w-5 h-5 ${i < Math.floor(product.rating)
                         ? 'fill-green-400 text-green-400'
                         : 'text-gray-300'
-                    }`}
+                      }`}
                   />
                 ))}
               </div>
